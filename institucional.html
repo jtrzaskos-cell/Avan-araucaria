@@ -3,41 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o AvançAraucária: missão, visão, valores e pilares que guiam o desenvolvimento econômico e inovador de Araucária.">
     <title>Institucional - AvançAraucária</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden font-inter">
 
-    <!-- Header (Same as Index) -->
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all border-b border-slate-100">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" class="flex flex-col justify-center group">
                 <h1 class="font-black text-blue-900 text-2xl leading-none tracking-tighter">AVANÇARAUCÁRIA</h1>
-                <div class="flex items-center mt-1">
-                    <div class="h-px w-4 bg-blue-600 mr-2"></div>
-                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">Plantando ideias, colhendo ações!</p>
-                </div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Plantando ideias, colhendo ações!</p>
             </a>
+            
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Início</a>
-                <a href="institucional.html" class="nav-link font-semibold text-blue-600 text-sm uppercase">Institucional</a>
-                <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Associados</a>
-                <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Contato</a>
+                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
+                <a href="institucional.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Institucional</a>
+                <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="galerias.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Galerias</a>
+                <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
-            <div class="flex items-center space-x-3">
-                <button class="p-2.5 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-xl transition-all shadow-sm font-bold text-xs">BUSCAR</button>
+
+            <div class="flex items-center gap-3">
+                <button onclick="alert('Busca em desenvolvimento')" 
+                        class="px-6 py-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-2xl text-sm font-bold uppercase transition-all">
+                    Buscar
+                </button>
+                <button id="menu-mobile" class="lg:hidden p-3 bg-slate-100 rounded-2xl text-sm font-bold uppercase">
+                    Menu
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="reveal pt-40 pb-20 bg-blue-900 text-white relative overflow-hidden">
+    <section class="reveal pt-32 pb-20 bg-blue-900 text-white relative overflow-hidden">
         <div class="absolute right-0 top-0 w-1/3 h-full bg-blue-800 -skew-x-12 translate-x-1/2 z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-5xl font-black mb-4">Institucional</h2>
-            <p class="text-blue-200 text-xl max-w-2xl">Conheça nossa história, missão e os valores que guiam o desenvolvimento de Araucária.</p>
+            <div class="max-w-2xl">
+                <h2 class="text-5xl md:text-6xl font-black mb-6">Institucional</h2>
+                <p class="text-blue-200 text-xl">Conheça nossa história, missão, visão e os valores que impulsionam o desenvolvimento de Araucária.</p>
+            </div>
         </div>
     </section>
 
@@ -45,36 +55,52 @@
     <section class="reveal py-24 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
-                <div class="space-y-8">
+                
+                <!-- Left Column -->
+                <div class="space-y-10">
                     <div>
-                        <h3 class="text-3xl font-black text-slate-900 mb-4">Quem Somos</h3>
-                        <p class="text-slate-500 text-lg leading-relaxed">O AvançAraucária é um ecossistema de inovação e desenvolvimento econômico que une a iniciativa privada, o setor público e instituições de ensino para transformar o futuro da nossa cidade.</p>
+                        <h3 class="text-3xl font-black text-slate-900 mb-5">Quem Somos</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            O AvançAraucária é um ecossistema de inovação e desenvolvimento econômico que une empresas, instituições públicas e de ensino para promover o crescimento sustentável e tecnológico da região de Araucária.
+                        </p>
                     </div>
-                    <div class="grid sm:grid-cols-2 gap-8">
-                        <div class="p-6 bg-slate-50 rounded-3xl">
-                            <h4 class="font-black text-blue-600 uppercase text-xs mb-2 tracking-widest">Nossa Missão</h4>
-                            <p class="text-slate-600 font-medium">Impulsionar o crescimento sustentável através da colaboração estratégica.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                            <h4 class="font-black text-blue-600 uppercase text-sm mb-3 tracking-widest">Missão</h4>
+                            <p class="text-slate-700">Impulsionar o desenvolvimento econômico sustentável através da colaboração estratégica entre setor público, privado e academia.</p>
                         </div>
-                        <div class="p-6 bg-slate-50 rounded-3xl">
-                            <h4 class="font-black text-blue-600 uppercase text-xs mb-2 tracking-widest">Nossa Visão</h4>
-                            <p class="text-slate-600 font-medium">Ser referência nacional em integração setorial e desenvolvimento regional.</p>
+                        <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                            <h4 class="font-black text-blue-600 uppercase text-sm mb-3 tracking-widest">Visão</h4>
+                            <p class="text-slate-700">Ser referência nacional em integração regional e inovação aplicada ao desenvolvimento municipal.</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-900 rounded-[3rem] p-12 text-white">
-                    <h3 class="text-2xl font-black mb-6">Nossos Pilares</h3>
-                    <ul class="space-y-6">
-                        <li class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-black text-xs shrink-0">01</div>
-                            <p class="text-slate-400"><span class="text-white font-bold">Inovação Tecnológica:</span> Fomento a novas tecnologias e processos produtivos.</p>
+
+                <!-- Right Column -->
+                <div class="bg-slate-900 rounded-[2.5rem] p-10 lg:p-12 text-white">
+                    <h3 class="text-2xl font-black mb-8">Nossos Pilares</h3>
+                    <ul class="space-y-8">
+                        <li class="flex gap-5">
+                            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center font-black text-sm shrink-0">01</div>
+                            <div>
+                                <p class="font-bold text-white">Inovação Tecnológica</p>
+                                <p class="text-slate-400 text-[15px]">Fomento a novas tecnologias e processos produtivos.</p>
+                            </div>
                         </li>
-                        <li class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-black text-xs shrink-0">02</div>
-                            <p class="text-slate-400"><span class="text-white font-bold">Educação e Talento:</span> Parceria com universidades para formar a mão de obra do futuro.</p>
+                        <li class="flex gap-5">
+                            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center font-black text-sm shrink-0">02</div>
+                            <div>
+                                <p class="font-bold text-white">Educação e Talento</p>
+                                <p class="text-slate-400 text-[15px]">Parcerias com instituições de ensino para capacitação profissional.</p>
+                            </div>
                         </li>
-                        <li class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-black text-xs shrink-0">03</div>
-                            <p class="text-slate-400"><span class="text-white font-bold">Sustentabilidade:</span> Desenvolvimento que respeita o meio ambiente e a comunidade.</p>
+                        <li class="flex gap-5">
+                            <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center font-black text-sm shrink-0">03</div>
+                            <div>
+                                <p class="font-bold text-white">Sustentabilidade</p>
+                                <p class="text-slate-400 text-[15px]">Desenvolvimento econômico que respeita o meio ambiente e a comunidade.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -82,18 +108,14 @@
         </div>
     </section>
 
-    <!-- Footer (Same as Index) -->
+    <!-- Footer -->
     <footer class="bg-white py-16 border-t border-slate-100">
-        <div class="container mx-auto px-4 text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
-                <div class="flex flex-col">
-                    <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">© 2026 AvançAraucária. Todos os direitos reservados.</p>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="flex items-center gap-3 mb-6 md:mb-0">
+                    <span class="font-black text-slate-900 text-xl tracking-tighter">AVANÇARAUCÁRIA</span>
                 </div>
-                <div class="flex space-x-8">
-                    <a href="#" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest">Facebook</a>
-                    <a href="#" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all uppercase tracking-widest">Instagram</a>
-                </div>
+                <p class="text-xs font-bold text-slate-400 uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

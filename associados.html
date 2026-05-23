@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os associados do AvançAraucária - Empresas e instituições que impulsionam o desenvolvimento de Araucária.">
     <title>Associados - AvançAraucária</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden font-inter">
 
     <!-- Header -->
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all border-b border-slate-100">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" class="flex flex-col justify-center group">
                 <h1 class="font-black text-blue-900 text-2xl leading-none tracking-tighter">AVANÇARAUCÁRIA</h1>
-                <div class="flex items-center mt-1">
-                    <div class="h-px w-4 bg-blue-600 mr-2"></div>
-                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">Plantando ideias, colhendo ações!</p>
-                </div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Plantando ideias, colhendo ações!</p>
             </a>
+            
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Início</a>
-                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Institucional</a>
-                <a href="associados.html" class="nav-link font-semibold text-blue-600 text-sm uppercase">Associados</a>
-                <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Contato</a>
+                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
+                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Institucional</a>
+                <a href="associados.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
-            <div class="flex items-center space-x-3">
-                <button class="p-2.5 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-xl transition-all shadow-sm font-bold text-xs">BUSCAR</button>
+
+            <div class="flex items-center gap-3">
+                <button onclick="alert('Busca em desenvolvimento')" 
+                        class="px-6 py-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-2xl text-sm font-bold uppercase transition-all">
+                    Buscar
+                </button>
+                <button id="menu-mobile" class="lg:hidden p-3 bg-slate-100 rounded-2xl text-sm font-bold uppercase">
+                    Menu
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="reveal pt-40 pb-20 bg-blue-900 text-white relative overflow-hidden">
+    <section class="reveal pt-32 pb-20 bg-blue-900 text-white relative overflow-hidden">
         <div class="absolute right-0 top-0 w-1/3 h-full bg-blue-800 -skew-x-12 translate-x-1/2 z-0"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center md:text-left">
-            <h2 class="text-5xl font-black mb-4">Associados</h2>
-            <p class="text-blue-200 text-xl max-w-2xl">Conecte sua empresa ao futuro de Araucária. Conheça quem já faz parte desta rede.</p>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <h2 class="text-5xl md:text-6xl font-black mb-6">Associados</h2>
+                <p class="text-blue-200 text-xl">Empresas e instituições que acreditam no potencial de Araucária e fazem parte da nossa rede de desenvolvimento.</p>
+            </div>
         </div>
     </section>
 
@@ -45,37 +54,58 @@
     <section class="reveal py-24 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <h3 class="text-3xl font-black text-slate-900">Lista de Associados</h3>
-                <a href="contato.html" class="mt-6 md:mt-0 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-sm hover:bg-blue-700 transition-all hover-lift">QUERO ME ASSOCIAR</a>
+                <div>
+                    <h3 class="text-3xl font-black text-slate-900">Nossos Associados</h3>
+                    <p class="text-slate-500 mt-2">15 instituições e empresas ativas</p>
+                </div>
+                <a href="contato.html" 
+                   class="mt-6 md:mt-0 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-sm hover:bg-blue-700 transition-all hover-lift">
+                    QUERO ME ASSOCIAR
+                </a>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Associado Card -->
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Educação</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">UFPR</h4>
-                    <p class="text-slate-500 mb-6">Universidade Federal do Paraná - Campus Araucária</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="associados-grid">
+                <!-- Card 1 -->
+                <div class="associado-card">
+                    <span class="category">Educação</span>
+                    <h4 class="text-2xl font-black text-slate-900 mt-4">UFPR</h4>
+                    <p class="text-slate-600 mt-3">Universidade Federal do Paraná - Campus Araucária</p>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
                         Rua Quinze de Novembro, Centro
                     </div>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Tecnologia</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">SUCESU PARANÁ</h4>
-                    <p class="text-slate-500 mb-6">Associação de Usuários de Informática e Telecomunicações</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
+
+                <!-- Card 2 -->
+                <div class="associado-card">
+                    <span class="category">Tecnologia</span>
+                    <h4 class="text-2xl font-black text-slate-900 mt-4">SUCESU PARANÁ</h4>
+                    <p class="text-slate-600 mt-3">Associação de Usuários de Informática e Telecomunicações do Paraná</p>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
                         Rua Benjamin Constant, Centro
                     </div>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Construção</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">VKR Empreendimentos</h4>
-                    <p class="text-slate-500 mb-6">Soluções imobiliárias e construção civil de alto padrão.</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
-                        Rua Suzana Suckow
+
+                <!-- Card 3 -->
+                <div class="associado-card">
+                    <span class="category">Construção</span>
+                    <h4 class="text-2xl font-black text-slate-900 mt-4">VKR Empreendimentos</h4>
+                    <p class="text-slate-600 mt-3">Soluções imobiliárias e construção civil de alto padrão</p>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        Rua Suzana Suckow, Araucária
                     </div>
                 </div>
-                <!-- ... Adicionar mais conforme necessário ... -->
+
+                <!-- Card 4 -->
+                <div class="associado-card">
+                    <span class="category">Imobiliário</span>
+                    <h4 class="text-2xl font-black text-slate-900 mt-4">Maya Incorporadora</h4>
+                    <p class="text-slate-600 mt-3">Desenvolvimento de empreendimentos residenciais e comerciais</p>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
+                        Travessa Rafael F. Greca
+                    </div>
+                </div>
+
+                <!-- Adicione mais cards aqui conforme necessário -->
             </div>
         </div>
     </section>
@@ -83,9 +113,11 @@
     <!-- Footer -->
     <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <span class="font-black text-slate-900 text-lg uppercase">AVANÇARAUCÁRIA</span>
-                <p class="text-xs font-bold text-slate-400 uppercase mt-4 md:mt-0">© 2026 AvançAraucária.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="flex items-center gap-3 mb-6 md:mb-0">
+                    <span class="font-black text-slate-900 text-xl tracking-tighter">AVANÇARAUCÁRIA</span>
+                </div>
+                <p class="text-xs font-bold text-slate-400 uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

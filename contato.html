@@ -3,79 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Associados - AvançAraucária</title>
+    <meta name="description" content="Entre em contato com o AvançAraucária. Telefone, WhatsApp e formulário para associações, sugestões e parcerias.">
+    <title>Contato - AvançAraucária</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden font-inter">
 
     <!-- Header -->
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all border-b border-slate-100">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" class="flex flex-col justify-center group">
                 <h1 class="font-black text-blue-900 text-2xl leading-none tracking-tighter">AVANÇARAUCÁRIA</h1>
-                <div class="flex items-center mt-1">
-                    <div class="h-px w-4 bg-blue-600 mr-2"></div>
-                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">Plantando ideias, colhendo ações!</p>
-                </div>
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Plantando ideias, colhendo ações!</p>
             </a>
+            
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Início</a>
-                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Institucional</a>
-                <a href="associados.html" class="nav-link font-semibold text-blue-600 text-sm uppercase">Associados</a>
-                <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase">Contato</a>
+                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
+                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Institucional</a>
+                <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="contato.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
-            <div class="flex items-center space-x-3">
-                <button class="p-2.5 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-xl transition-all shadow-sm font-bold text-xs">BUSCAR</button>
+
+            <div class="flex items-center gap-3">
+                <button onclick="alert('Busca em desenvolvimento')" 
+                        class="px-6 py-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-2xl text-sm font-bold uppercase transition-all">
+                    Buscar
+                </button>
+                <button id="menu-mobile" class="lg:hidden p-3 bg-slate-100 rounded-2xl text-sm font-bold uppercase">
+                    Menu
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="reveal pt-40 pb-20 bg-blue-900 text-white relative overflow-hidden">
+    <section class="reveal pt-32 pb-20 bg-blue-900 text-white relative overflow-hidden">
         <div class="absolute right-0 top-0 w-1/3 h-full bg-blue-800 -skew-x-12 translate-x-1/2 z-0"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center md:text-left">
-            <h2 class="text-5xl font-black mb-4">Associados</h2>
-            <p class="text-blue-200 text-xl max-w-2xl">Conecte sua empresa ao futuro de Araucária. Conheça quem já faz parte desta rede.</p>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <h2 class="text-5xl md:text-6xl font-black mb-6">Contato</h2>
+                <p class="text-blue-200 text-xl">Vamos construir o futuro de Araucária juntos. Entre em contato conosco.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Contact Section -->
     <section class="reveal py-24 bg-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <h3 class="text-3xl font-black text-slate-900">Lista de Associados</h3>
-                <a href="contato.html" class="mt-6 md:mt-0 bg-blue-600 text-white px-8 py-3 rounded-2xl font-black text-sm hover:bg-blue-700 transition-all hover-lift">QUERO ME ASSOCIAR</a>
-            </div>
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-8">Nossos Canais</h3>
+                    
+                    <div class="space-y-10">
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center font-black text-xl flex-shrink-0">☎</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Telefone</p>
+                                <p class="text-2xl font-black text-slate-900">(41) 3277-8568</p>
+                            </div>
+                        </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Associado Card -->
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Educação</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">UFPR</h4>
-                    <p class="text-slate-500 mb-6">Universidade Federal do Paraná - Campus Araucária</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
-                        Rua Quinze de Novembro, Centro
+                        <div class="flex gap-6">
+                            <a href="https://api.whatsapp.com/send?phone=5541992778568" target="_blank"
+                               class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center font-black text-xl flex-shrink-0 hover:bg-green-600 hover:text-white transition-all">
+                                📱
+                            </a>
+                            <div>
+                                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">WhatsApp</p>
+                                <p class="text-2xl font-black text-slate-900">(41) 99277-8568</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6">
+                            <div class="w-14 h-14 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center font-black text-xl flex-shrink-0">📍</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">Endereço</p>
+                                <p class="text-slate-700">Rua das Missões, 123 - Centro<br>Araucária, PR - CEP 83707-000</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Tecnologia</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">SUCESU PARANÁ</h4>
-                    <p class="text-slate-500 mb-6">Associação de Usuários de Informática e Telecomunicações</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
-                        Rua Benjamin Constant, Centro
-                    </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 lg:p-12">
+                    <h3 class="text-2xl font-black mb-8">Envie sua mensagem</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-2">NOME COMPLETO</label>
+                            <input type="text" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-2">E-MAIL</label>
+                            <input type="email" required class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-2">ASSUNTO</label>
+                            <select required class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none">
+                                <option value="">Selecione...</option>
+                                <option>Quero me associar</option>
+                                <option>Parcerias</option>
+                                <option>Sugestões ou críticas</option>
+                                <option>Informações gerais</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 mb-2">MENSAGEM</label>
+                            <textarea required rows="5" class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none resize-y"></textarea>
+                        </div>
+                        
+                        <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl text-lg transition-all hover-lift">
+                            ENVIAR MENSAGEM
+                        </button>
+                    </form>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 hover:border-blue-200 transition-all group">
-                    <span class="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Construção</span>
-                    <h4 class="text-xl font-black text-slate-900 mb-2">VKR Empreendimentos</h4>
-                    <p class="text-slate-500 mb-6">Soluções imobiliárias e construção civil de alto padrão.</p>
-                    <div class="pt-6 border-t border-slate-200 text-xs font-bold text-slate-400">
-                        Rua Suzana Suckow
-                    </div>
-                </div>
-                <!-- ... Adicionar mais conforme necessário ... -->
             </div>
         </div>
     </section>
@@ -83,9 +133,11 @@
     <!-- Footer -->
     <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <span class="font-black text-slate-900 text-lg uppercase">AVANÇARAUCÁRIA</span>
-                <p class="text-xs font-bold text-slate-400 uppercase mt-4 md:mt-0">© 2026 AvançAraucária.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="flex items-center gap-3 mb-6 md:mb-0">
+                    <span class="font-black text-slate-900 text-xl tracking-tighter">AVANÇARAUCÁRIA</span>
+                </div>
+                <p class="text-xs font-bold text-slate-400 uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
