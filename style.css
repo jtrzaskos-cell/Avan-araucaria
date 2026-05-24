@@ -1,143 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* =============================================
+   ACIAA.CSS - Estilo Completo e Moderno
+   ============================================= */
+
+:root {
+    --primary: #025BAA;
+    --secondary: #FFDD00;
+    --dark: #1e2937;
+    --gray: #64748b;
+    --light: #f8fafc;
+}
 
 * {
-    transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.font-inter {
-    font-family: 'Inter', sans-serif;
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #1e2937;
+    background-color: #f8fafc;
 }
 
-/* Hero Gradient */
+/* ==================== HEADER ==================== */
+header {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 75px;
+    width: auto;
+}
+
+/* ==================== HERO SECTION ==================== */
 .hero-gradient {
     background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(15, 23, 42, 0.7) 70%,
-        rgba(15, 23, 42, 0.85) 100%);
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(15, 23, 42, 0.75) 70%,
+        rgba(15, 23, 42, 0.9) 100%);
 }
 
-/* ====================== ENTIDADES ====================== */
+/* ==================== ENTIDADES / PARCEIROS ==================== */
+#entities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    padding: 10px 0;
+}
+
 .entity-card {
     background: white;
     border: 2px solid #e2e8f0;
     border-radius: 20px;
     padding: 28px 20px;
     text-align: center;
-    transition: all 0.4s ease;
-    height: 180px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    min-height: 195px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .entity-card:hover {
     border-color: #3b82f6;
-    box-shadow: 0 20px 25px -5px rgb(59 130 246 / 0.1);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(59, 130, 246, 0.15);
+    transform: translateY(-10px);
 }
 
 .entity-card img {
-    transition: all 0.4s ease;
+    height: 68px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+    transition: transform 0.4s ease;
 }
 
 .entity-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.12);
 }
 
-/* Hover Lift Effect */
+.entity-card p {
+    font-weight: 700;
+    color: #1e2937;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.entity-card:hover p {
+    color: #1e40af;
+}
+
+/* Botão Ver Todas */
+#toggle-entities {
+    background: #f1f5f9;
+    color: #334155;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#toggle-entities:hover {
+    background: #dbeafe;
+    color: #1e40af;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* ==================== OUTROS ESTILOS GERAIS ==================== */
+
+h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
 .hover-lift:hover {
     transform: translateY(-8px);
 }
 
-/* Reveal Animation */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Tailwind Script Configuration */
-@layer base {
-    h1, h2, h3 {
-        font-family: 'Inter', sans-serif;
+/* Responsividade */
+@media (max-width: 640px) {
+    .entity-card {
+        min-height: 175px;
+        padding: 22px 16px;
+    }
+    
+    .entity-card img {
+        height: 58px;
     }
 }
-/* Associados Page */
-.associado-card {
-    background-color: #f8fafc;
-    padding: 2.5rem;
-    border-radius: 2rem;
-    border: 1px solid #e2e8f0;
-    transition: all 0.4s ease;
+
+@media (max-width: 768px) {
+    header .nav-link {
+        font-size: 0.9rem;
+    }
 }
 
-.associado-card:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 20px 25px -5px rgb(59 130 246 / 0.1);
-    transform: translateY(-10px);
-}
-
-.category {
-    display: inline-block;
-    background-color: #dbeafe;
-    color: #1e40af;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 14px;
-    border-radius: 9999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-/* Gallery Styles */
-.gallery-card {
-    position: relative;
-    height: 380px;
-    border-radius: 2.5rem;
-    overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    transition: all 0.4s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 25px 50px -12px rgb(59 130 246 / 0.25);
-}
-
-.gallery-card img {
-    transition: transform 1s ease;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.12);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.4), transparent);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2.5rem;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-card:hover .gallery-overlay {
-    opacity: 1;
-}
-/* Institucional */
-.institucional-card {
-    transition: all 0.4s ease;
-}
-
-.institucional-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-}
+/* Utilitários */
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.font-bold { font-weight: 700; }
+.rounded-2xl { border-radius: 16px; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
