@@ -88,76 +88,83 @@
 
             <div id="entities-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
 
-  <!-- butões empresas -->
-<header class="fixed-top bg-white shadow">
-    <div class="container">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-3 col-6">
-                <a href="ACIAA.html">
-                    <img src="https://www.aciaa.org.br/upload/logomarcas/aciaa.jpg" 
-                         alt="ACIAA" 
-                         class="img-fluid" 
-                         style="max-height: 75px;">
-                </a>
+  <!-- ====================== ENTIDADES / PARCEIROS ====================== -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Entidades Parceiras</h2>
+                <h3 class="text-4xl font-black text-slate-900">Instituições que movem o desenvolvimento</h3>
             </div>
-            <header class="fixed-top bg-white shadow">
-    <div class="container">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-3 col-6">
-                <a href="ACIAA.html">
-                    <img src="https://passe-escolar.araucaria.pr.gov.br/assets/logo-prefeitura-BFYAJuuj.png" alt="Prefeitura de Araucária" 
-                         class="img-fluid" 
-                         style="max-height: 75px;">
-                </a>
-            </div>
-             <header class="fixed-top bg-white shadow">
-    <div class="container">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-3 col-6">
-                <a href="ACIAA.html">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Sebrae.svg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Sebrae Paraná" 
-                         class="img-fluid" 
-                         style="max-height: 75px;">
-                </a>
-            </div>
-            <header class="fixed-top bg-white shadow">
-    <div class="container">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-3 col-6">
-                <a href="ACIAA.html">
-                    <img src="https://www.guaira.pr.gov.br/fotos/antigas/100516153806_ifpr_png.png" alt="IFPR" 
-                         class="img-fluid" 
-                         style="max-height: 75px;">
-                </a>
-            </div>
-            <header class="fixed-top bg-white shadow">
-    <div class="container">
-        <div class="row align-items-center py-3">
-            <div class="col-lg-3 col-6">
-                <a href="ACIAA.html">
-                    <img src="https://www.tecpar.br/sites/tecpar/arquivos_restritos/files/imagem/2021-04/6082d27bcea14-logo_tecpar.png" alt="TECPAR" 
-                         class="img-fluid" 
-                         style="max-height: 75px;">
-                </a>
-            </div>
-                
-                <!-- Cards extras (inicialmente escondidos) -->
-                <div class="entity-card hidden extra">FECOMÉRCIO</div>
-                <div class="entity-card hidden extra">FIEP</div>
-                <div class="entity-card hidden extra">OAB/PR</div>
-                <div class="entity-card hidden extra">SINDIMONT</div>
-                <div class="entity-card hidden extra">SINDUSCON</div>
-            </div>
-            <!-- resto do header permanece igual -->
-
-            <div class="mt-16 text-center">
-                <button id="toggle-entities" class="px-8 py-4 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 rounded-2xl font-bold transition-all flex items-center gap-2 mx-auto">
-                    <span id="toggle-text">Ver todas as 15 entidades</span>
-                    <span id="toggle-icon">↓</span>
-                </button>
-            </div>
+            <p class="text-slate-500 mt-4 md:mt-0">15 instituições integradas</p>
         </div>
-    </section>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="entities-grid">
+            
+            <!-- Entidade 1 -->
+            <a href="ACIAA.html" class="entity-card group">
+                <img src="https://www.aciaa.org.br/upload/logomarcas/aciaa.jpg" 
+                     alt="ACIAA" class="h-16 mx-auto object-contain">
+                <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">ACIAA</p>
+            </a>
+
+            <!-- Entidade 2 -->
+            <a href="#" class="entity-card group">
+                <img src="https://passe-escolar.araucaria.pr.gov.br/assets/logo-prefeitura-BFYAJuuj.png" 
+                     alt="Prefeitura de Araucária" class="h-16 mx-auto object-contain">
+                <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">Prefeitura</p>
+            </a>
+
+            <!-- Entidade 3 -->
+            <a href="#" class="entity-card group">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Sebrae.svg" 
+                     alt="Sebrae" class="h-16 mx-auto object-contain">
+                <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">SEBRAE/PR</p>
+            </a>
+
+            <!-- Entidade 4 -->
+            <a href="#" class="entity-card group">
+                <img src="https://www.guaira.pr.gov.br/fotos/antigas/100516153806_ifpr_png.png" 
+                     alt="IFPR" class="h-16 mx-auto object-contain">
+                <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">IFPR</p>
+            </a>
+
+            <!-- Entidade 5 -->
+            <a href="#" class="entity-card group">
+                <img src="https://www.tecpar.br/sites/tecpar/arquivos_restritos/files/imagem/2021-04/6082d27bcea14-logo_tecpar.png" 
+                     alt="TECPAR" class="h-16 mx-auto object-contain">
+                <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">TECPAR</p>
+            </a>
+
+            <!-- Cards extras (inicialmente escondidos) -->
+            <div class="entity-card hidden extra group">
+                <span class="text-center font-bold text-slate-700 group-hover:text-blue-600">FECOMÉRCIO</span>
+            </div>
+            <div class="entity-card hidden extra group">
+                <span class="text-center font-bold text-slate-700 group-hover:text-blue-600">FIEP</span>
+            </div>
+            <div class="entity-card hidden extra group">
+                <span class="text-center font-bold text-slate-700 group-hover:text-blue-600">OAB/PR</span>
+            </div>
+            <div class="entity-card hidden extra group">
+                <span class="text-center font-bold text-slate-700 group-hover:text-blue-600">SINDIMONT</span>
+            </div>
+            <div class="entity-card hidden extra group">
+                <span class="text-center font-bold text-slate-700 group-hover:text-blue-600">SINDUSCON</span>
+            </div>
+
+        </div>
+
+        <!-- Botão Ver Todas -->
+        <div class="mt-12 text-center">
+            <button id="toggle-entities" 
+                    class="px-10 py-4 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 rounded-2xl font-bold transition-all flex items-center gap-3 mx-auto">
+                <span id="toggle-text">Ver todas as 15 entidades</span>
+                <span id="toggle-icon" class="text-xl">↓</span>
+            </button>
+        </div>
+    </div>
+</section>
 
     <!-- Outras seções permanecem iguais (Newsletter, Associados, Contato, Footer) -->
     <!-- ... (mantive o resto igual, apenas com pequenas correções) ... -->
