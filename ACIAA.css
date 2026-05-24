@@ -1,13 +1,13 @@
 /* =============================================
-   ACIAA - Estilo Moderno e Organizado
+   ACIAA.CSS - Estilo Completo e Moderno
    ============================================= */
 
 :root {
     --primary: #025BAA;
     --secondary: #FFDD00;
-    --dark: #2C2C2C;
-    --gray: #707070;
-    --light: #F8F9FA;
+    --dark: #1e2937;
+    --gray: #64748b;
+    --light: #f8fafc;
 }
 
 * {
@@ -17,15 +17,15 @@
 }
 
 body {
-    font-family: 'Lato', 'Poppins', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: #1e2937;
+    background-color: #f8fafc;
 }
 
 /* ==================== HEADER ==================== */
 header {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     z-index: 1000;
 }
 
@@ -34,176 +34,128 @@ header {
     width: auto;
 }
 
-/* Menu */
-.nav-link {
-    font-weight: 600;
-    color: #333;
-    transition: all 0.3s;
+/* ==================== HERO SECTION ==================== */
+.hero-gradient {
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(15, 23, 42, 0.75) 70%,
+        rgba(15, 23, 42, 0.9) 100%);
 }
 
-.nav-link:hover {
-    color: var(--primary);
+/* ==================== ENTIDADES / PARCEIROS ==================== */
+#entities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    padding: 10px 0;
 }
 
-/* ==================== BANNER ==================== */
-#section-banner {
-    position: relative;
-    overflow: hidden;
-}
-
-.owl-carousel-banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* ==================== BOTÕES GERAIS ==================== */
-.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    font-weight: 600;
-}
-
-.btn-primary:hover {
-    background-color: #01438a;
-    border-color: #01438a;
-}
-
-.btn-outline-primary {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--primary);
-    color: white;
-}
-
-/* ==================== SEÇÃO ACESSO RÁPIDO ==================== */
-.box-btn {
+.entity-card {
     background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 20px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
+    min-height: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.box-btn:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(2, 91, 170, 0.15);
-    border-color: var(--primary);
-}
-
-.box-btn .icone i {
-    font-size: 2.2rem;
-    color: var(--primary);
-    margin-bottom: 12px;
-}
-
-/* ==================== NOTÍCIAS ==================== */
-.box-noticia {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: all 0.4s;
-}
-
-.box-noticia:hover {
+.entity-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 20px 30px rgba(59, 130, 246, 0.15);
     transform: translateY(-10px);
-    box-shadow: 0 20px 35px rgba(2, 91, 170, 0.12);
 }
 
-.box-noticia .foto {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
+.entity-card img {
+    height: 68px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+    transition: transform 0.4s ease;
 }
 
-.titulo {
-    font-size: 1.1rem;
+.entity-card:hover img {
+    transform: scale(1.12);
+}
+
+.entity-card p {
     font-weight: 700;
+    color: #1e2937;
+    font-size: 0.95rem;
     line-height: 1.3;
+    margin: 0;
+    transition: color 0.3s;
 }
 
-/* ==================== GALERIA ==================== */
-.box-galeria {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: all 0.4s;
+.entity-card:hover p {
+    color: #1e40af;
 }
 
-.box-galeria:hover {
-    transform: scale(1.03);
+/* Botão Ver Todas */
+#toggle-entities {
+    background: #f1f5f9;
+    color: #334155;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.box-galeria .foto {
-    height: 260px;
-    background-size: cover;
-    background-position: center;
+#toggle-entities:hover {
+    background: #dbeafe;
+    color: #1e40af;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
 }
 
-/* ==================== FOOTER ==================== */
-#section-copy {
-    background-color: #f1f1f1;
-    border-top: 4px solid var(--primary);
+/* ==================== OUTROS ESTILOS GERAIS ==================== */
+
+h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
 }
 
-/* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 992px) {
-    .nav-link {
-        padding: 12px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .box-btn {
-        margin-bottom: 15px;
-    }
-    
-    .logo img {
-        max-height: 60px;
-    }
-}
-
-/* ==================== EFEITOS ADICIONAIS ==================== */
-.hover-lift {
-    transition: transform 0.3s ease;
+.btn {
+    transition: all 0.3s ease;
 }
 
 .hover-lift:hover {
     transform: translateY(-8px);
 }
 
-.text-primary {
-    color: var(--primary) !important;
+/* Responsividade */
+@media (max-width: 640px) {
+    .entity-card {
+        min-height: 175px;
+        padding: 22px 16px;
+    }
+    
+    .entity-card img {
+        height: 58px;
+    }
 }
 
-.bg-primary {
-    background-color: var(--primary) !important;
+@media (max-width: 768px) {
+    header .nav-link {
+        font-size: 0.9rem;
+    }
 }
 
-/* ==================== UTILITÁRIOS ==================== */
-.ver-mais {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 14px 40px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: all 0.3s;
-}
-
-.ver-mais:hover {
-    background-color: white;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-/* Fix para Owl Carousel */
-.owl-carousel .owl-stage {
-    padding: 10px 0;
-}
+/* Utilitários */
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.font-bold { font-weight: 700; }
+.rounded-2xl { border-radius: 16px; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
