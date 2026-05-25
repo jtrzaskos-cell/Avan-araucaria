@@ -422,6 +422,149 @@
     </div>
 </section>
 
+<!-- ====================== CONTATO ====================== -->
+<section id="section-contato" class="py-24 bg-slate-50">
+    <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-3">Fale Conosco</h2>
+            <h1 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter">
+                Entre em <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Contato</span>
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+            
+            <!-- Coluna Esquerda - Informações de Contato -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Entre em contato com a <strong>AVANÇARAUCÁRIA</strong>. 
+                        Estamos à disposição para fornecer informações, registrar sugestões, 
+                        reclamações ou solicitações.
+                    </p>
+                    <p class="text-slate-500 mt-4">
+                        Teremos o maior prazer em atendê-lo!
+                    </p>
+                </div>
+
+                <!-- Contatos -->
+                <div class="space-y-8">
+                    
+                    <!-- Telefone -->
+                    <div class="flex gap-5">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            📞
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-700">Telefone</p>
+                            <p class="text-slate-600">(41) 9277-8568</p>
+                            <p class="text-slate-600">(41) 99277-8568</p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="flex gap-5">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            💬
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-700">WhatsApp</p>
+                            <a href="https://api.whatsapp.com/send?phone=5541992778568" 
+                               target="_blank"
+                               class="text-green-600 hover:text-green-700 font-medium transition-colors">
+                                (41) 99277-8568
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="flex gap-5">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                            📍
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-700">Endereço</p>
+                            <p class="text-slate-600 leading-tight">
+                                Rua João Pessoa, 145 - Centro<br>
+                                83702-280 - Araucária, Paraná
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna Direita - Formulário -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-slate-100">
+                <form action="https://avancaraucaria.com.br/contato" method="post" id="id-form-contato">
+                    <input type="hidden" name="_token" value="nQVqmsMlgBVYPKgfu6wnmwBlUnGjAarqurBskIv0">
+
+                    <div class="space-y-6">
+                        <div>
+                            <input type="text" 
+                                   id="nome" 
+                                   name="nome" 
+                                   placeholder="Seu nome completo" 
+                                   required
+                                   class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   placeholder="Seu melhor e-mail" 
+                                   required
+                                   class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <input type="tel" 
+                                   id="telefone" 
+                                   name="telefone" 
+                                   placeholder="Telefone / WhatsApp" 
+                                   required
+                                   class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <select id="assunto" 
+                                    name="assunto" 
+                                    required
+                                    class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all bg-white">
+                                <option value="">Selecione o assunto</option>
+                                <option value="Informações">Informações</option>
+                                <option value="Sugestões">Sugestões</option>
+                                <option value="Críticas">Críticas</option>
+                                <option value="Reclamações">Reclamações</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <textarea id="mensagem" 
+                                      name="mensagem" 
+                                      rows="5" 
+                                      placeholder="Escreva sua mensagem aqui..."
+                                      required
+                                      class="w-full px-6 py-4 rounded-3xl border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-y"></textarea>
+                        </div>
+
+                        <!-- reCAPTCHA (placeholder) -->
+                        <div class="pt-2">
+                            <div class="g-recaptcha" data-sitekey="6LePXCETAAAAAP4LVBQ2w1omAkvg27jQIZab1bvV"></div>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl text-lg transition-all duration-300 mt-4">
+                            ENVIAR MENSAGEM
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
