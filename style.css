@@ -142,7 +142,7 @@ header {
     background: white;
     padding: 28px;
     border-radius: 20px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid black;
     transition: all 0.4s ease;
     height: 100%;
 }
