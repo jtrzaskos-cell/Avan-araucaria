@@ -8,7 +8,7 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ACIAA.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden font-inter">
 
@@ -44,7 +44,7 @@
     <section class="relative h-[90vh] min-h-[600px] flex items-center pt-20 overflow-hidden">
         <div class="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920" 
-                 class="w-full h-full object-cover" alt="Araucária">
+                 class="w-full h-full object-cover" alt="Araucária - Cidade em desenvolvimento">
             <div class="hero-gradient absolute inset-0"></div>
         </div>
         
@@ -60,7 +60,8 @@
                 <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl">
                     O AvançAraucária une as maiores mentes e instituições para impulsionar o desenvolvimento econômico sustentável e tecnológico de nossa região.
                 </p>
-                <a href="contato.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105">
+                <a href="contato.html" 
+                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-600/30 transition-all hover:scale-105">
                     Quero ser um Associado
                 </a>
             </div>
@@ -72,7 +73,7 @@
         </div>
     </section>
 
-    <!-- ENTIDADES -->
+    <!-- ====================== ENTIDADES / PARCEIROS ====================== -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">
@@ -84,86 +85,310 @@
             </div>
 
             <div id="entities-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                <!-- Suas entidades aqui (mantidas como você enviou) -->
-                <!-- ... (o código das entidades que você já tinha) ... -->
+                
+                <!-- Entidades Principais -->
+                <a href="ACIAA.html" class="entity-card group">
+                    <img src="https://www.aciaa.org.br/upload/logomarcas/aciaa.jpg" alt="ACIAA" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">ACIAA</p>
+                </a>
+
+                <a href="Prefeitura.html" class="entity-card group">
+                    <img src="https://passe-escolar.araucaria.pr.gov.br/assets/logo-prefeitura-BFYAJuuj.png" alt="Prefeitura" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">Prefeitura</p>
+                </a>
+
+                <a href="SEBRAE.html" class="entity-card group">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Sebrae.svg" alt="Sebrae" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">SEBRAE/PR</p>
+                </a>
+
+                <a href="IFPR.html" class="entity-card group">
+                    <img src="https://www.guaira.pr.gov.br/fotos/antigas/100516153806_ifpr_png.png" alt="IFPR" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">IFPR</p>
+                </a>
+
+                <a href="TECPAR.html" class="entity-card group">
+                    <img src="https://www.tecpar.br/sites/tecpar/arquivos_restritos/files/imagem/2021-04/6082d27bcea14-logo_tecpar.png" alt="TECPAR" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">TECPAR</p>
+                </a>
+
+                <!-- Entidades Extras (escondidas) -->
+                <div class="entity-card hidden extra group">
+                    <a href="FECOMÉRCIO.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bP5ZfLDvXkn-k2b8mYWdoZVvWW_H8kMbVw&s" alt="FECOMÉRCIO" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">FECOMÉRCIO</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                     <a href="FIEP.html">
+                    <img src="https://portaldecompras.sistemafiep.org.br/media/Sistema-Fiep-Azul.png" alt="FIEP" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">FIEP</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                     <a href="OAB.html">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHSMDgewTLI7w/company-logo_200_200/B4DZU.9VmVG4AQ-/0/1740518022064?e=2147483647&v=beta&t=JEVPVFDG7K2W1aYHA740F8GDV5kmIWgVM8t5BrSaal8" alt="OAB/PR" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">OAB/PR</p>
+                     </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                    <a href="SINDIMONT.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7A4ksLNjf2AqAt7QbC5QwNf3lOAn3vRpWtg&s" alt="SINDIMONT" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">SINDIMONT</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                     <a href="SINDUSCON.html">
+                    <img src="https://sindusconpr.com.br/temas/sinduscon2023/img/logo-sinduscon-peq.png" alt="SINDUSCON" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">SINDUSCON</p>
+                    </a>
+                </div>
+
+                <!-- Mais entidades extras -->
+                <div class="entity-card hidden extra group">
+                     <a href="AECIAR.html">
+                    <img src="https://opopularpr.com.br/wp-content/uploads/2024/10/coluna-da-aeciar-industria-cb08.webp" alt="AECIAR" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">AECIAR</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                    <a href="Câmara.html">
+                    <img src="https://www.araucaria.pr.leg.br/logo.png" alt="Câmara" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">Câmara</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                    <a href="COC.html">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=361,fit=crop/m6LrvqLwz7U5M6pG/logo-coc-e1666043184615-YNqJBPVwO4upkNNw.png" alt="COC" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">COC</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                    <a href="FAEP.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Marca-FAEP.png" alt="FAEP" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">FAEP</p>
+                    </a>
+                </div>
+
+                <div class="entity-card hidden extra group">
+                    <a href="UNIFACEAR.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp9m_f-VtUZEA6bs0O0xvGDG7W3I8xNydbWg&s" alt="UNIFACEAR" class="h-16 mx-auto object-contain">
+                    <p class="text-center mt-3 font-bold text-slate-700 group-hover:text-blue-600">UNIFACEAR</p>
+                    </a>
+                </div>
             </div>
 
+            <!-- Botão Ver Todas -->
             <div class="mt-16 text-center">
-                <button id="toggle-entities" class="px-10 py-4 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 rounded-2xl font-bold transition-all flex items-center gap-3 mx-auto">
+                <button id="toggle-entities" 
+                        class="px-10 py-4 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 rounded-2xl font-bold transition-all flex items-center gap-3 mx-auto">
                     <span id="toggle-text">Ver todas as 15 entidades</span>
                     <span id="toggle-icon" class="text-xl">↓</span>
                 </button>
             </div>
         </div>
     </section>
-
-    <!-- NOTÍCIAS (3 por linha) -->
-    <section class="py-20 bg-slate-100">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">ÚLTIMAS</h2>
-                    <h3 class="text-4xl font-black text-slate-900">Notícias</h3>
-                </div>
-                <a href="https://avancaraucaria.com.br/noticias" class="mt-6 md:mt-0 text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2">
-                    Ver todas as notícias →
-                </a>
+<!-- ====================== ÚLTIMAS NOTÍCIAS ====================== -->
+<section class="py-20 bg-slate-100">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">ÚLTIMAS</h2>
+                <h3 class="text-4xl font-black text-slate-900">Notícias</h3>
             </div>
+            <a href="https://avancaraucaria.com.br/noticias" 
+               class="mt-6 md:mt-0 text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2">
+                Ver todas as notícias →
+            </a>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- As 6 notícias que você enviou, agora em grid de 3 -->
-                <!-- Notícia 1 -->
-                <a href="https://avancaraucaria.com.br/noticia/oab-recebeu-a-14ª-plenaria-do-avancaraucaria" class="group">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all">
-                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_147628.jpg')"></div>
-                        <div class="p-6">
-                            <p class="text-xs text-slate-500 mb-2">02 de maio de 2025</p>
-                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600">OAB recebeu a 14ª Plenária do AvançAraucária</h4>
-                        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Notícia 1 -->
+            <a href="https://avancaraucaria.com.br/noticia/oab-recebeu-a-14ª-plenaria-do-avancaraucaria" class="group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center" 
+                         style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_147628.jpg')"></div>
+                    <div class="p-6">
+                        <p class="text-xs text-slate-500 mb-2">02 de maio de 2025</p>
+                        <h4 class="font-bold text-lg leading-tight text-slate-800 group-hover:text-blue-600 transition-colors">
+                            OAB recebeu a 14ª Plenária do AvançAraucária
+                        </h4>
                     </div>
-                </a>
-
-                <!-- Repita o mesmo padrão para as outras 5 notícias -->
-                <!-- (Posso adicionar todas se quiser, mas para não ficar gigante, deixei o modelo) -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ASSOCIADOS -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">COMUNIDADE</h2>
-                <h3 class="text-4xl font-black text-slate-900">Novos Associados</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-blue-200 transition-all">
-                    <h5 class="font-bold text-xl">UFPR</h5>
-                    <p class="text-slate-500 text-sm mt-1">Universidade Federal do Paraná</p>
-                    <p class="text-xs text-slate-400 mt-4">Rua Quinze de Novembro, Centro</p>
                 </div>
-                <!-- Repita para os outros associados -->
-            </div>
+            </a>
 
-            <div class="flex justify-center gap-4 mt-12">
-                <a href="associados.html" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold">Todos os Associados</a>
-                <a href="contato.html" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-bold">Quero ser Associado</a>
+            <!-- Notícia 2 -->
+            <a href="https://avancaraucaria.com.br/noticia/corredor-energetico-e-tecnologico-ganha-forca-com-adesao-de-sao-mateus-do-sul-e-parcerias-estrategicas" class="group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center" 
+                         style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_138288.jpg')"></div>
+                    <div class="p-6">
+                        <p class="text-xs text-slate-500 mb-2">13 de dezembro de 2024</p>
+                        <h4 class="font-bold text-lg leading-tight text-slate-800 group-hover:text-blue-600 transition-colors">
+                            Corredor Energético e Tecnológico ganha força com adesão de São Mateus do Sul
+                        </h4>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Notícia 3 -->
+            <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-e-reconhecido-como-case-de-sucesso-no-parana" class="group">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center" 
+                         style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_136597.jpg')"></div>
+                    <div class="p-6">
+                        <p class="text-xs text-slate-500 mb-2">25 de novembro de 2024</p>
+                        <h4 class="font-bold text-lg leading-tight text-slate-800 group-hover:text-blue-600 transition-colors">
+                            AvançAraucária é reconhecido como case de sucesso no Paraná
+                        </h4>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+<!-- Associados -->
+<section id="section-associados" class="border-color-3 bg-cinza">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="titulo-section-associados">NOVOS ASSOCIADOS <br><b>FAÇA PARTE!</b></h1>
+            </div>
+            <div class="col-md-12">
+                                    <div class="row colunas-center-6">
+                                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/ufpr-universidade-federal-do-parana">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">UFPR - Universidade Federal do Paraná</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Quinze de Novembro
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/sucesu-parana-associacao-de-usuarios-de-informatica-e-telecomunicacoes">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">SUCESU PARANÁ - Associação de Usuários de Informática e Telecomunicações</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Benjamin Constant
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/terra-nova-regularizacoes-fundiarias">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">Terra Nova Regularizações Fundiárias</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Coronel Dulcídio
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/vkr-empreendimentos">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">VKR Empreendimentos</p>
+                                    <p class="telefone-endereco-associado">
+                                        (41) 3552-1678<br>Rua Suzana Suckow
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/renascer">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">ReNascer</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Coronel Dulcidio
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/maya-incorporadora">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">Maya Incorporadora</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Travessa Rafael Francisco Greca
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/sharp-transportes">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">Sharp Transportes </p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Dr. José Czaki
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/ja-parana">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">JA Paraná</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Senador Accioly Filho
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="col-md-4">
+                            <a href="https://avancaraucaria.com.br/associado/spvs">
+                                <div class="box-associado">
+                                    <p class="titulo-associado">SPVS</p>
+                                    <p class="telefone-endereco-associado">
+                                        <br>Rua Mateus Leme
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                                    </div>
             </div>
         </div>
-    </section>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2 col-sm-12">
+                <div class="text-center p-t-30">
+                    <a href="https://avancaraucaria.com.br/associados" class="ver-mais">TODOS OS ASSOCIADOS</a> 
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="text-center p-t-30">
+                    <a href="https://avancaraucaria.com.br/contato" class="ver-mais">QUERO SER UM ASSOCIADO</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
-                <div>
-                    <span class="font-black text-slate-900 text-xl">AVANÇARAUCÁRIA</span>
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex items-center space-x-3 mb-6 opacity-50 hover:opacity-100 transition-all cursor-pointer">
+                        <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
+                    </div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
                 </div>
-                <p class="text-xs font-bold text-slate-400">© 2026 AvançAraucária. Todos os direitos reservados.</p>
-                <div class="flex gap-6">
-                    <a href="#" class="hover:text-blue-600">Facebook</a>
-                    <a href="#" class="hover:text-pink-600">Instagram</a>
+                <div class="flex space-x-8">
+                    <a href="https://Facebook.com/" aria-label="Facebook" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest uppercase">Facebook</a>
+                    <a href="https://Instagram.com/" aria-label="Instagram" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all uppercase tracking-widest uppercase">Instagram</a>
+                    <a href="https://WhatsApp.com/" aria-label="WhatsApp" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest uppercase">WhatsApp</a>
                 </div>
             </div>
         </div>
