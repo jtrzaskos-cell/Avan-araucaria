@@ -1,13 +1,8 @@
-/* =============================================
-   ACIAA.CSS - Estilo Completo e Moderno
-   ============================================= */
-
 :root {
     --primary: #025BAA;
-    --secondary: #FFDD00;
+    --accent: #FFDD00;
     --dark: #1e2937;
     --gray: #64748b;
-    --light: #f8fafc;
 }
 
 * {
@@ -20,81 +15,81 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     color: #1e2937;
-    background-color: #f8fafc;
 }
 
 /* ==================== HEADER ==================== */
 header {
-    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-.logo img {
-    max-height: 75px;
-    width: auto;
+header a {
+    text-decoration: none;
 }
 
-/* ==================== HERO SECTION ==================== */
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ==================== HERO ==================== */
 .hero-gradient {
     background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0.35) 0%,
-        rgba(15, 23, 42, 0.75) 70%,
-        rgba(15, 23, 42, 0.9) 100%);
+        rgba(0,0,0,0.4) 0%, 
+        rgba(15,23,42,0.75) 60%, 
+        rgba(15,23,42,0.92) 100%);
 }
 
-/* ==================== ENTIDADES / PARCEIROS ==================== */
+/* ==================== ENTIDADES ==================== */
 #entities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 24px;
-    padding: 10px 0;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 28px;
 }
 
 .entity-card {
     background: white;
     border: 2px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 28px 20px;
+    border-radius: 22px;
+    padding: 32px 20px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
-    min-height: 195px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
 }
 
 .entity-card:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 20px 30px rgba(59, 130, 246, 0.15);
-    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 35px rgba(2, 91, 170, 0.15);
+    transform: translateY(-12px);
 }
 
 .entity-card img {
-    height: 68px;
+    height: 72px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     transition: transform 0.4s ease;
 }
 
 .entity-card:hover img {
-    transform: scale(1.12);
+    transform: scale(1.15);
 }
 
 .entity-card p {
     font-weight: 700;
     color: #1e2937;
-    font-size: 0.95rem;
-    line-height: 1.3;
+    font-size: 1rem;
     margin: 0;
-    transition: color 0.3s;
-}
-
-.entity-card:hover p {
-    color: #1e40af;
 }
 
 /* Botão Ver Todas */
@@ -102,60 +97,98 @@ header {
     background: #f1f5f9;
     color: #334155;
     border: none;
-    padding: 16px 32px;
+    padding: 16px 36px;
     border-radius: 9999px;
     font-weight: 700;
-    font-size: 1.02rem;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 #toggle-entities:hover {
     background: #dbeafe;
-    color: #1e40af;
+    color: var(--primary);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
 }
 
-/* ==================== OUTROS ESTILOS GERAIS ==================== */
-
-h2, h3 {
-    font-weight: 800;
-    letter-spacing: -0.025em;
+/* ==================== NOTÍCIAS ==================== */
+.box-noticia {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s;
+    height: 100%;
 }
 
-.btn {
-    transition: all 0.3s ease;
+.box-noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
 }
 
-.hover-lift:hover {
-    transform: translateY(-8px);
+.box-noticia .foto {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Responsividade */
-@media (max-width: 640px) {
+.box-noticia .titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    padding: 16px 20px 8px;
+}
+
+.box-noticia .data {
+    color: #64748b;
+    font-size: 0.9rem;
+    padding: 0 20px;
+}
+
+.box-noticia .box-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 12px;
+}
+
+.ver-mais {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.ver-mais:hover {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
     .entity-card {
-        min-height: 175px;
-        padding: 22px 16px;
+        min-height: 180px;
+        padding: 24px 16px;
     }
     
     .entity-card img {
-        height: 58px;
+        height: 60px;
     }
 }
 
-@media (max-width: 768px) {
-    header .nav-link {
-        font-size: 0.9rem;
+@media (max-width: 640px) {
+    #entities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }
-
-/* Utilitários */
-.text-primary { color: var(--primary) !important; }
-.bg-primary { background-color: var(--primary) !important; }
-.font-bold { font-weight: 700; }
-.rounded-2xl { border-radius: 16px; }
-.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
