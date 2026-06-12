@@ -1,121 +1,93 @@
-// =============================================
-// AVANÇARAUCÁRIA - Script Unificado
-// Funciona em todas as páginas
-// =============================================
+// script.js
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('%cAvançAraucária carregado com sucesso!', 'color: #3b82f6; font-weight: bold;');
+document.addEventListener('DOMContentLoaded', function() {
 
-    initRevealAnimations();
-    setupEntitiesToggle();
-    setupMobileMenu();
-    setupContactForm();
-    setupGalleryHover();
-    setupSmoothScroll();
-});
+    // ==================== MENU MOBILE ====================
+    const menuMobileBtn = document.getElementById('menu-mobile');
+    const nav = document.querySelector('nav');
 
-// =============================================
-// 1. Reveal Animations (todas as páginas)
-// =============================================
-function initRevealAnimations() {
-    const reveals = document.querySelectorAll('.reveal');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
+    if (menuMobileBtn) {
+        menuMobileBtn.addEventListener('click', function() {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('shadow-lg');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('lg:hidden');
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+    }
+
+    // ==================== DROPDOWN INSTITUCIONAL ====================
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const submenu = dropdown.querySelector('.dropdown-menu');
+
+        if (link && submenu) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Fecha todos os outros dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== submenu) {
+                        menu.classList.add('hidden');
+                    }
+                });
+
+                // Toggle do submenu atual
+                submenu.classList.toggle('hidden');
+            });
+        }
     });
 
-    reveals.forEach(reveal => observer.observe(reveal));
-}
+    // Fecha dropdown ao clicar fora
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.add('hidden');
+            });
+        }
+    });
 
-// =============================================
-// 2. Toggle de Entidades (index.html)
-// =============================================
-function setupEntitiesToggle() {
+    // ==================== TOGGLE ENTIDADES (Ver todas) ====================
     const toggleBtn = document.getElementById('toggle-entities');
-    if (!toggleBtn) return;
-
     const toggleText = document.getElementById('toggle-text');
     const toggleIcon = document.getElementById('toggle-icon');
     const extraEntities = document.querySelectorAll('.extra');
 
-    let isExpanded = false;
+    let expanded = false;
 
-    toggleBtn.addEventListener('click', () => {
-        isExpanded = !isExpanded;
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            expanded = !expanded;
 
-        extraEntities.forEach(card => {
-            card.classList.toggle('hidden', !isExpanded);
+            extraEntities.forEach(entity => {
+                entity.classList.toggle('hidden', !expanded);
+            });
+
+            // Atualiza texto e ícone
+            if (expanded) {
+                toggleText.textContent = 'Ver menos';
+                toggleIcon.style.transform = 'rotate(180deg)';
+            } else {
+                toggleText.textContent = 'Ver todas as 15 entidades';
+                toggleIcon.style.transform = 'rotate(0deg)';
+            }
         });
+    }
 
-        if (isExpanded) {
-            toggleText.textContent = 'Mostrar menos';
-            toggleIcon.style.transform = 'rotate(180deg)';
-        } else {
-            toggleText.textContent = 'Ver todas as 15 entidades';
-            toggleIcon.style.transform = 'rotate(0deg)';
-        }
-    });
-}
+    // ==================== EFEITOS ADICIONAIS ====================
 
-// =============================================
-// 3. Menu Mobile
-// =============================================
-function setupMobileMenu() {
-    const mobileBtn = document.getElementById('menu-mobile');
-    if (!mobileBtn) return;
-
-    mobileBtn.addEventListener('click', () => {
-        alert('Menu mobile em desenvolvimento.\n\nEm breve teremos um menu deslizante completo.');
-        // Futuro: Implementar drawer menu aqui
-    });
-}
-
-// =============================================
-// 4. Formulário de Contato (contato.html)
-// =============================================
-function setupContactForm() {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const nome = form.querySelector('input[type="text"]');
-        alert(`✅ Mensagem enviada com sucesso!\n\nObrigado ${nome ? nome.value.split(' ')[0] : ''}!\nEntraremos em contato em breve.`);
-        
-        form.reset();
-    });
-}
-
-// =============================================
-// 5. Efeitos da Galeria (galerias.html)
-// =============================================
-function setupGalleryHover() {
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    galleryCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'scale(1.03)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'scale(1)';
-        });
-    });
-}
-
-// =============================================
-// 6. Scroll Suave para Links Internos
-// =============================================
-function setupSmoothScroll() {
+    // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            const target = document.querySelector(anchor.getAttribute('href'));
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({
@@ -125,26 +97,25 @@ function setupSmoothScroll() {
             }
         });
     });
-}
 
-// =============================================
-// Utilitários Globais
-// =============================================
+    // Hover effect nas cards (melhor visual)
+    const cards = document.querySelectorAll('.entity-card, .associado-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
 
-// Fecha alertas automaticamente (opcional)
-function showTemporaryAlert(message, duration = 4000) {
-    const alertBox = document.createElement('div');
-    alertBox.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-2xl shadow-2xl z-50 text-sm';
-    alertBox.textContent = message;
-    document.body.appendChild(alertBox);
+    // Fecha menu mobile ao redimensionar para desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+            nav.classList.add('hidden');
+            nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-lg', 'p-4');
+        }
+    });
 
-    setTimeout(() => {
-        alertBox.style.opacity = '0';
-        setTimeout(() => alertBox.remove(), 500);
-    }, duration);
-}
-
-// =============================================
-// Inicialização do Tailwind (caso necessário)
-// =============================================
-console.log('%cTodas as funcionalidades carregadas com sucesso!', 'color: #10b981; font-size: 13px;');
+    console.log('%c✅ AvançAraucária - Script carregado com sucesso!', 'color: #2563eb; font-weight: bold');
+});

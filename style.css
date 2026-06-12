@@ -33,6 +33,109 @@ header {
 .nav-link:hover {
     color: var(--primary) !important;
 }
+/* =============== DROPDOWN MENU =============== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.dropdown > a:hover {
+    color: #0066cc;
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+.aux-efeito-seta i {
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .aux-efeito-seta i,
+.dropdown.active .aux-efeito-seta i {
+    transform: rotate(180deg);
+}
+
+/* Menu Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 280px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Itens do menu */
+.dropdown-menu li {
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+    color: #0066cc;
+    padding-left: 25px;
+}
+
+.dropdown-menu i {
+    width: 16px;
+    color: #0066cc;
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 992px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        min-width: 100%;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+}
 
 /* ==================== HERO ==================== */
 .hero-gradient {
