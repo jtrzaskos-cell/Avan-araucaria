@@ -58,15 +58,6 @@ header {
     color: var(--primary);
 }
 
-.aux-efeito-seta i {
-    transition: transform 0.3s ease;
-}
-
-.dropdown:hover .aux-efeito-seta i,
-.dropdown.active .aux-efeito-seta i {
-    transform: rotate(180deg);
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
