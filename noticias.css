@@ -1,0 +1,156 @@
+/* =============================================
+   CSS - Página de Notícias - AvançAraucária
+   ============================================= */
+
+:root {
+    --primary: #025BAA;
+    --accent: #3b82f6;
+    --dark: #1e2937;
+    --gray: #64748b;
+    --light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc;
+    color: #1e2937;
+    line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ==================== TÍTULO DA PÁGINA ==================== */
+#section-noticias .box-titulo {
+    background: var(--primary);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+#section-noticias .box-titulo p {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* ==================== CARDS DE NOTÍCIAS ==================== */
+.box-noticia {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-noticia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.box-noticia .box-foto {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-noticia .titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    padding: 18px 20px 8px;
+    flex-grow: 1;
+}
+
+.box-noticia .data {
+    color: #64748b;
+    font-size: 0.9rem;
+    padding: 0 20px 16px;
+}
+
+.box-noticia .box-footer {
+    padding: 16px 20px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: auto;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ==================== PAGINAÇÃO ==================== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.pagination li {
+    list-style: none;
+}
+
+.pagination a, .pagination span {
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.pagination .active span {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 992px) {
+    .box-noticia .box-foto {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    #section-noticias .col-md-4 {
+        margin-bottom: 25px;
+    }
+}
+
+/* Utilitários */
+.font-black { font-weight: 900; }
+.tracking-wider { letter-spacing: 0.05em; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
