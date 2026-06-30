@@ -1,31 +1,98 @@
-.box-noticia {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
-    height: 100%;
+/* =============================================
+   ACIAA.CSS - Página de Notícias
+   ============================================= */
+
+:root {
+    --primary: #025BAA;
+    --accent: #3b82f6;
+    --dark: #1e2937;
+    --gray: #64748b;
+    --light: #f8fafc;
 }
 
-.box-noticia:hover {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.75;
+    color: #1e2937;
+    background-color: #f8fafc;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ==================== TÍTULO DA PÁGINA ==================== */
+.bg-white.border-b h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/* ==================== CARDS DE NOTÍCIAS ==================== */
+.bg-white.rounded-3xl {
+    transition: all 0.4s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.bg-white.rounded-3xl:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+    border-color: var(--accent);
 }
 
-.box-noticia .foto {
-    height: 220px;
+.h-56 {
     background-size: cover;
     background-position: center;
+    border-radius: 20px 20px 0 0;
 }
 
-.box-noticia .titulo {
+.h4.font-bold {
     font-size: 1.1rem;
-    font-weight: 700;
-    padding: 18px 20px 8px;
+    line-height: 1.35;
 }
 
-.box-noticia .data {
-    color: #64748b;
-    font-size: 0.9rem;
-    padding: 0 20px;
+/* ==================== PAGINAÇÃO ==================== */
+nav.flex.gap-2 a, nav.flex.gap-2 .bg-blue-600 {
+    padding: 12px 18px;
+    border-radius: 12px;
+    transition: all 0.3s;
 }
+
+nav.flex.gap-2 a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+    .bg-white.rounded-3xl .h-56 {
+        height: 200px;
+    }
+}
+
+/* Utilitários */
+.font-black { font-weight: 900; }
+.tracking-tighter { letter-spacing: -0.04em; }
