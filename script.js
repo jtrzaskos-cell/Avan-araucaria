@@ -1,5 +1,5 @@
 // =============================================
-// Script.js - AvançAraucária (Atualizado)
+// Script.js - AvançAraucária (Atualizado com Dropdowns)
 // =============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,12 +8,45 @@ document.addEventListener('DOMContentLoaded', () => {
     initRevealAnimations();
     setupEntitiesToggle();
     setupMobileMenu();
+    setupDropdowns();
     setupSmoothScroll();
 });
 
-// 1. Reveal Animations
+// ==================== DROPDOWNS (Hover) ====================
+function setupDropdowns() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        if (!link || !menu) return;
+
+        // Mouse entra
+        dropdown.addEventListener('mouseenter', () => {
+            menu.style.display = 'block';
+            menu.style.opacity = '1';
+            menu.style.transform = 'translateY(0)';
+        });
+
+        // Mouse sai
+        dropdown.addEventListener('mouseleave', () => {
+            menu.style.opacity = '0';
+            menu.style.transform = 'translateY(10px)';
+            
+            // Aguarda a animação terminar antes de esconder
+            setTimeout(() => {
+                if (!dropdown.matches(':hover')) {
+                    menu.style.display = 'none';
+                }
+            }, 250);
+        });
+    });
+}
+
+// ==================== REVEAL ANIMAÇÕES ====================
 function initRevealAnimations() {
-    const reveals = document.querySelectorAll('.reveal, section');
+    const reveals = document.querySelectorAll('section, .reveal');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -22,10 +55,7 @@ function initRevealAnimations() {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    });
+    }, { threshold: 0.1 });
 
     reveals.forEach(reveal => {
         reveal.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -35,7 +65,7 @@ function initRevealAnimations() {
     });
 }
 
-// 2. Toggle de Entidades
+// ==================== TOGGLE ENTIDADES ====================
 function setupEntitiesToggle() {
     const toggleBtn = document.getElementById('toggle-entities');
     if (!toggleBtn) return;
@@ -63,7 +93,7 @@ function setupEntitiesToggle() {
     });
 }
 
-// 3. Menu Mobile
+// ==================== MENU MOBILE ====================
 function setupMobileMenu() {
     const mobileBtn = document.getElementById('menu-mobile');
     if (!mobileBtn) return;
@@ -73,7 +103,7 @@ function setupMobileMenu() {
     });
 }
 
-// 4. Scroll Suave
+// ==================== SCROLL SUAVE ====================
 function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
@@ -89,5 +119,5 @@ function setupSmoothScroll() {
     });
 }
 
-// Inicialização
-console.log('%cTodas as funcionalidades carregadas!', 'color: #10b981; font-size: 13px;');
+// Finalização
+console.log('%cTodas as funcionalidades (incluindo dropdowns) carregadas!', 'color: #10b981; font-size: 13px;');
