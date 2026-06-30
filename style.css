@@ -240,6 +240,28 @@ header {
     font-size: 1.25rem;
 }
 
+/* Governança Cards */
+.governanca-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.governanca-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 45px rgba(2, 91, 170, 0.15);
+}
+
+.governanca-card img {
+    transition: transform 0.5s ease;
+}
+
+.governanca-card:hover img {
+    transform: scale(1.05);
+}
+
 /* ==================== FOOTER ==================== */
 footer {
     background: #0f172a;
