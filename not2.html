@@ -15,17 +15,35 @@
     <!-- Header -->
     <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col justify-center group">
+            <a href="ACIAA.html" class="flex flex-col justify-center group">
                 <h1 class="font-black text-blue-900 text-2xl leading-none tracking-tighter">AVANÇARAUCÁRIA</h1>
                 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Plantando ideias, colhendo ações!</p>
             </a>
             
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
-                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Institucional</a>
+                <a href="index.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Início</a>
+                <li class="dropdown" id="menu1">
+    <a href="javascript:;" class="aux-efeito-seta">
+        INSTITUCIONAL <i class="fa fa-chevron-down"></i>
+    </a>
+    <ul class="dropdown-menu" id="submenu1">
+        <li><a href="institucional.html"><i class="fa fa-caret-right"></i> Sobre a AVANÇA ARAUCÁRIA</a></li>
+        <li><a href="governança.html"><i class="fa fa-caret-right"></i> Governança</a></li>
+        <li><a href="https://avancaraucaria.com.br/diretorias-presidentes"><i class="fa fa-caret-right"></i> Galeria de Presidentes</a></li>
+        <li><a href="https://avancaraucaria.com.br/parceiros"><i class="fa fa-caret-right"></i> Parceiros</a></li>
+    </ul>
+</li>
+<li class="dropdown" id="menu1">
+ <a href="javascript:;" class="aux-efeito-seta">
+        IMPRENSA <i class="fa fa-chevron-down"></i>
+    </a>
+    <ul class="dropdown-menu" id="submenu1">
+        <li><a href="noticias.html"><i class="fa fa-caret-right"></i> Notícias</a></li>
+        <li><a href="galeria.html"><i class="fa fa-caret-right"></i> Galeria</a></li>
+        <li><a href="https://avancaraucaria.com.br/agendas"><i class="fa fa-caret-right"></i> Agenda</a></li>
+    </ul>
+</li>
                 <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Associados</a>
-                <a href="galerias.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Galerias</a>
-                <a href="noticias.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Notícias</a>
                 <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
 
@@ -123,18 +141,19 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
                 <div class="flex flex-col items-center md:items-start">
-                    <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">© 2026 AvançAraucária. Todos os direitos reservados.</p>
+                    <div class="flex items-center space-x-3 mb-6 opacity-50 hover:opacity-100 transition-all cursor-pointer">
+                        <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
+                    </div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
                 </div>
                 <div class="flex space-x-8">
-                    <a href="#" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all">Facebook</a>
-                    <a href="#" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all">Instagram</a>
-                    <a href="#" class="text-xs font-black text-slate-400 hover:text-green-600 transition-all">WhatsApp</a>
+                    <a href="https://Facebook.com/" aria-label="Facebook" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest uppercase">Facebook</a>
+                    <a href="https://Instagram.com/" aria-label="Instagram" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all uppercase tracking-widest uppercase">Instagram</a>
+                    <a href="https://WhatsApp.com/" aria-label="WhatsApp" class="text-xs font-black text-slate-400 hover:text-green-600 transition-all uppercase tracking-widest uppercase">WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
