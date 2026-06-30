@@ -1,93 +1,83 @@
-// script.js
+// =============================================
+// Script.js - AvançAraucária (Atualizado)
+// =============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('%cAvançAraucária carregado com sucesso!', 'color: #3b82f6; font-weight: bold;');
 
-    // ==================== MENU MOBILE ====================
-    const menuMobileBtn = document.getElementById('menu-mobile');
-    const nav = document.querySelector('nav');
+    initRevealAnimations();
+    setupEntitiesToggle();
+    setupMobileMenu();
+    setupSmoothScroll();
+});
 
-    if (menuMobileBtn) {
-        menuMobileBtn.addEventListener('click', function() {
-            nav.classList.toggle('hidden');
-            nav.classList.toggle('flex');
-            nav.classList.toggle('flex-col');
-            nav.classList.toggle('absolute');
-            nav.classList.toggle('top-full');
-            nav.classList.toggle('left-0');
-            nav.classList.toggle('w-full');
-            nav.classList.toggle('bg-white');
-            nav.classList.toggle('shadow-lg');
-            nav.classList.toggle('p-4');
-            nav.classList.toggle('lg:hidden');
+// 1. Reveal Animations
+function initRevealAnimations() {
+    const reveals = document.querySelectorAll('.reveal, section');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
         });
-    }
-
-    // ==================== DROPDOWN INSTITUCIONAL ====================
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        const submenu = dropdown.querySelector('.dropdown-menu');
-
-        if (link && submenu) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Fecha todos os outros dropdowns
-                document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                    if (menu !== submenu) {
-                        menu.classList.add('hidden');
-                    }
-                });
-
-                // Toggle do submenu atual
-                submenu.classList.toggle('hidden');
-            });
-        }
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     });
 
-    // Fecha dropdown ao clicar fora
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.add('hidden');
-            });
-        }
+    reveals.forEach(reveal => {
+        reveal.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        reveal.style.opacity = '0';
+        reveal.style.transform = 'translateY(40px)';
+        observer.observe(reveal);
     });
+}
 
-    // ==================== TOGGLE ENTIDADES (Ver todas) ====================
+// 2. Toggle de Entidades
+function setupEntitiesToggle() {
     const toggleBtn = document.getElementById('toggle-entities');
+    if (!toggleBtn) return;
+
     const toggleText = document.getElementById('toggle-text');
     const toggleIcon = document.getElementById('toggle-icon');
     const extraEntities = document.querySelectorAll('.extra');
 
-    let expanded = false;
+    let isExpanded = false;
 
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', function() {
-            expanded = !expanded;
+    toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
 
-            extraEntities.forEach(entity => {
-                entity.classList.toggle('hidden', !expanded);
-            });
-
-            // Atualiza texto e ícone
-            if (expanded) {
-                toggleText.textContent = 'Ver menos';
-                toggleIcon.style.transform = 'rotate(180deg)';
-            } else {
-                toggleText.textContent = 'Ver todas as 15 entidades';
-                toggleIcon.style.transform = 'rotate(0deg)';
-            }
+        extraEntities.forEach(card => {
+            card.classList.toggle('hidden', !isExpanded);
         });
-    }
 
-    // ==================== EFEITOS ADICIONAIS ====================
+        if (isExpanded) {
+            toggleText.textContent = 'Mostrar menos';
+            toggleIcon.style.transform = 'rotate(180deg)';
+        } else {
+            toggleText.textContent = 'Ver todas as 15 entidades';
+            toggleIcon.style.transform = 'rotate(0deg)';
+        }
+    });
+}
 
-    // Smooth scroll para links internos
+// 3. Menu Mobile
+function setupMobileMenu() {
+    const mobileBtn = document.getElementById('menu-mobile');
+    if (!mobileBtn) return;
+
+    mobileBtn.addEventListener('click', () => {
+        alert('Menu mobile em desenvolvimento.\n\nEm breve teremos um drawer completo!');
+    });
+}
+
+// 4. Scroll Suave
+function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
+        anchor.addEventListener('click', (e) => {
+            const target = document.querySelector(anchor.getAttribute('href'));
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({
@@ -97,25 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}
 
-    // Hover effect nas cards (melhor visual)
-    const cards = document.querySelectorAll('.entity-card, .associado-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-4px)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Fecha menu mobile ao redimensionar para desktop
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024) {
-            nav.classList.add('hidden');
-            nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-white', 'shadow-lg', 'p-4');
-        }
-    });
-
-    console.log('%c✅ AvançAraucária - Script carregado com sucesso!', 'color: #2563eb; font-weight: bold');
-});
+// Inicialização
+console.log('%cTodas as funcionalidades carregadas!', 'color: #10b981; font-size: 13px;');
