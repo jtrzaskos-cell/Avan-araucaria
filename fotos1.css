@@ -1,0 +1,88 @@
+/* =============================================
+   ACIAA.CSS - Página de Galeria de Fotos
+   ============================================= */
+
+:root {
+    --primary: #025BAA;
+    --accent: #3b82f6;
+    --dark: #1e2937;
+    --gray: #64748b;
+    --light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.75;
+    color: #1e2937;
+    background-color: #f8fafc;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ==================== TÍTULO DA GALERIA ==================== */
+.bg-white.border-b h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/* ==================== GALERIA DE FOTOS ==================== */
+.gallery-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+    transform: scale(1.04);
+}
+
+.gallery-item .aspect-square {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border-radius: 20px;
+}
+
+.gallery-item:hover .aspect-square {
+    box-shadow: 0 20px 35px rgba(2, 91, 170, 0.2);
+}
+
+/* ==================== COMPARTILHAMENTO ==================== */
+.bg-white.border-t {
+    border-color: #e2e8f0;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+    .gallery-item .aspect-square {
+        height: 180px;
+    }
+}
+
+/* Utilitários */
+.font-black { font-weight: 900; }
+.tracking-tighter { letter-spacing: -0.04em; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
