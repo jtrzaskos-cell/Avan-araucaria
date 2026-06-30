@@ -1,0 +1,31 @@
+.box-noticia {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.box-noticia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.box-noticia .foto {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-noticia .titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 18px 20px 8px;
+}
+
+.box-noticia .data {
+    color: #64748b;
+    font-size: 0.9rem;
+    padding: 0 20px;
+}
