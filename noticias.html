@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVANÇA ARAUCARIA - Notícias</title>
-    <link rel="stylesheet" href="noticias.css">
+    <meta name="description" content="Notícias - AvançAraucária">
+    <title>Notícias - AvançAraucária</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ACIAA.css">
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden font-inter">
 
-    <section id="section-noticias">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-
-                    <div class="box-titulo">
-                        <p>Notícias</p>
-                    </div>
-
-                    <div class="row">
-                          <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col justify-center group">
+            <a href="ACIAA.html" class="flex flex-col justify-center group">
                 <h1 class="font-black text-blue-900 text-2xl leading-none tracking-tighter">AVANÇARAUCÁRIA</h1>
                 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Plantando ideias, colhendo ações!</p>
             </a>
             
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
+                <a href="index.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Início</a>
                 <li class="dropdown" id="menu1">
     <a href="javascript:;" class="aux-efeito-seta">
         INSTITUCIONAL <i class="fa fa-chevron-down"></i>
@@ -64,254 +59,206 @@
         </div>
     </header>
 
-                        <!-- Notícia 1 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/oab-recebeu-a-14ª-plenaria-do-avancaraucaria">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_147628.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">OAB recebeu a 14ª Plenária do AvançAraucária</div>
-                                    <div class="data">sexta, 02 de maio de 2025</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+    <!-- Título da Página -->
+    <section class="pt-32 pb-12 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-black text-slate-900 text-center">Notícias</h1>
+        </div>
+    </section>
 
-                        <!-- Notícia 2 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/corredor-energetico-e-tecnologico-ganha-forca-com-adesao-de-sao-mateus-do-sul-e-parcerias-estrategicas">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_138288.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Corredor Energético e Tecnológico ganha força com adesão de São Mateus do Sul e parcerias estratégicas</div>
-                                    <div class="data">sexta, 13 de dezembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+    <!-- Lista de Notícias -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                        <!-- Notícia 3 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-e-reconhecido-como-case-de-sucesso-no-parana">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_136597.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">AvançAraucária é reconhecido como case de sucesso no Paraná</div>
-                                    <div class="data">segunda, 25 de novembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
+                <!-- Notícia 1 -->
+                <a href="not1.html" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_147628.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">02 de maio de 2025</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">OAB recebeu a 14ª Plenária do AvançAraucária</h4>
                         </div>
-
-                        <!-- Notícia 4 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/camara-tecnica-de-sustentabilidade-discute-futuro-verde-para-araucaria">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143771.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Câmara Técnica de Sustentabilidade discute futuro verde para Araucária</div>
-                                    <div class="data">segunda, 11 de novembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 5 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-sustentavel-e-inovacao-marcam-reuniao-plenaria-no-acqua-park">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_141719.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Desenvolvimento sustentável e inovação marcam reunião Plenária no Acqua Park</div>
-                                    <div class="data">terça, 29 de outubro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 6 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-sustentavel-em-araucaria:-camara-tecnica-propoe-novas-iniciativas-ambientais">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143766.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Desenvolvimento sustentável em Araucária: Câmara Técnica propõe novas iniciativas ambientais</div>
-                                    <div class="data">segunda, 14 de outubro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 7 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-urbano-inovacao-e-sustentabilidade-pautam-a-plenaria-do-avancaraucaria">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_141169.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Desenvolvimento urbano, inovação e sustentabilidade pautam a plenária do AvançAraucária</div>
-                                    <div class="data">segunda, 30 de setembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 8 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/candidatos-a-prefeitura-de-araucaria-firmam-compromisso-com-demandas-da-sociedade-civil-em-reuniao-do-avancaraucaria">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140802.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Candidatos à prefeitura de Araucária firmam compromisso com demandas da sociedade civil em reunião do AvançAraucária</div>
-                                    <div class="data">segunda, 23 de setembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 9 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/mercado-de-carbono-e-conferencia-de-meio-ambiente-sao-temas-da-terceira-reuniao-da-camara-tecnica">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143762.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Mercado de Carbono e Conferência de Meio Ambiente são temas da terceira reunião da Câmara Técnica</div>
-                                    <div class="data">segunda, 09 de setembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 10 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-reune-liderancas-para-planejar-o-futuro-do-municipio">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140811.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">AvançAraucária reúne lideranças para planejar o futuro do município</div>
-                                    <div class="data">terça, 03 de setembro de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 11 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/transformando-desafios-em-oportunidades:-araucaria-e-o-compromisso-com-o-meio-ambiente">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143777.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Transformando desafios em oportunidades: Araucária e o compromisso com o meio ambiente</div>
-                                    <div class="data">segunda, 05 de agosto de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 12 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/aeciar-recebeu-sexta-reuniao-plenaria-do-avancaraucaria">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140693.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">AECIAR recebeu sexta reunião Plenária do AvançAraucária</div>
-                                    <div class="data">terça, 30 de julho de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 13 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/camara-tecnica-de-sustentabilidade-socioambiental-realizou-sua-primeira-reuniao">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143760.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">Câmara Técnica de Sustentabilidade Socioambiental realizou sua primeira reunião</div>
-                                    <div class="data">segunda, 08 de julho de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Notícia 14 -->
-                        <div class="col-md-4 col-sm-6">
-                            <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-fez-visita-tecnica-ao-parque-de-inovacao-tecnologica-de-sao-jose-dos-campos">
-                                <div class="box-noticia">
-                                    <div class="box-foto">
-                                        <div class="foto" style="background: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_135330.jpg')"></div>
-                                    </div>
-                                    <div class="titulo">AvançAraucária fez visita técnica ao Parque de Inovação Tecnológica de São José dos Campos</div>
-                                    <div class="data">segunda, 17 de junho de 2024</div>
-                                    <div class="box-footer">
-                                        <p>Veja a notícia completa</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Paginação -->
-                        <div class="col-sm-12 text-center">
-                            <nav>
-                                <ul class="pagination">
-                                    <li class="page-item disabled"><span class="page-link">‹</span></li>
-                                    <li class="page-item active"><span class="page-link">1</span></li>
-                                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="?page=2">›</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-
                     </div>
-                </div>
+                </a>
 
-                <!-- Sidebar -->
-                <div class="col-sm-3">
-                    <!-- Sidebar content pode ser adicionado depois -->
-                </div>
+                <!-- Notícia 2 -->
+                <a href="not2.html" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_138288.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">13 de dezembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Corredor Energético e Tecnológico ganha força com adesão de São Mateus do Sul</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 3 -->
+                <a href="not3.html" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_136597.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">25 de novembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">AvançAraucária é reconhecido como case de sucesso no Paraná</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 4 -->
+                <a href="https://avancaraucaria.com.br/noticia/camara-tecnica-de-sustentabilidade-discute-futuro-verde-para-araucaria" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143771.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">11 de novembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Câmara Técnica de Sustentabilidade discute futuro verde para Araucária</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 5 -->
+                <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-sustentavel-e-inovacao-marcam-reuniao-plenaria-no-acqua-park" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_141719.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">29 de outubro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Desenvolvimento sustentável e inovação marcam reunião Plenária no Acqua Park</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 6 -->
+                <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-sustentavel-em-araucaria:-camara-tecnica-propoe-novas-iniciativas-ambientais" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143766.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">14 de outubro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Desenvolvimento sustentável em Araucária: Câmara Técnica propõe novas iniciativas ambientais</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 7 -->
+                <a href="https://avancaraucaria.com.br/noticia/desenvolvimento-urbano-inovacao-e-sustentabilidade-pautam-a-plenaria-do-avancaraucaria" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_141169.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">30 de setembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Desenvolvimento urbano, inovação e sustentabilidade pautam a plenária do AvançAraucária</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 8 -->
+                <a href="https://avancaraucaria.com.br/noticia/candidatos-a-prefeitura-de-araucaria-firmam-compromisso-com-demandas-da-sociedade-civil-em-reuniao-do-avancaraucaria" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140802.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">23 de setembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Candidatos à prefeitura de Araucária firmam compromisso com demandas da sociedade civil</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 9 -->
+                <a href="https://avancaraucaria.com.br/noticia/mercado-de-carbono-e-conferencia-de-meio-ambiente-sao-temas-da-terceira-reuniao-da-camara-tecnica" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143762.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">09 de setembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Mercado de Carbono e Conferência de Meio Ambiente são temas da terceira reunião da Câmara Técnica</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 10 -->
+                <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-reune-liderancas-para-planejar-o-futuro-do-municipio" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140811.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">03 de setembro de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">AvançAraucária reúne lideranças para planejar o futuro do município</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 11 -->
+                <a href="https://avancaraucaria.com.br/noticia/transformando-desafios-em-oportunidades:-araucaria-e-o-compromisso-com-o-meio-ambiente" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143777.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">05 de agosto de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Transformando desafios em oportunidades: Araucária e o compromisso com o meio ambiente</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 12 -->
+                <a href="https://avancaraucaria.com.br/noticia/aeciar-recebeu-sexta-reuniao-plenaria-do-avancaraucaria" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_140693.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">30 de julho de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">AECIAR recebeu sexta reunião Plenária do AvançAraucária</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 13 -->
+                <a href="https://avancaraucaria.com.br/noticia/camara-tecnica-de-sustentabilidade-socioambiental-realizou-sua-primeira-reuniao" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_143760.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">08 de julho de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">Câmara Técnica de Sustentabilidade Socioambiental realizou sua primeira reunião</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Notícia 14 -->
+                <a href="https://avancaraucaria.com.br/noticia/avancaraucaria-fez-visita-tecnica-ao-parque-de-inovacao-tecnologica-de-sao-jose-dos-campos" class="group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100">
+                        <div class="h-56 bg-cover bg-center" style="background-image: url('https://mvl-aces.nyc3.digitaloceanspaces.com/upload/noticias/p_135330.jpg')"></div>
+                        <div class="p-6">
+                            <p class="text-xs text-slate-500 mb-2">17 de junho de 2024</p>
+                            <h4 class="font-bold text-lg leading-tight group-hover:text-blue-600 transition-colors">AvançAraucária fez visita técnica ao Parque de Inovação Tecnológica de São José dos Campos</h4>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Paginação -->
+            <div class="flex justify-center mt-16">
+                <nav class="flex gap-2">
+                    <a href="#" class="px-4 py-3 border border-slate-300 rounded-xl text-slate-600 hover:bg-slate-100 transition-all">‹ Anterior</a>
+                    <a href="#" class="px-4 py-3 bg-blue-600 text-white rounded-xl">1</a>
+                    <a href="#" class="px-4 py-3 border border-slate-300 rounded-xl text-slate-600 hover:bg-slate-100 transition-all">2</a>
+                    <a href="#" class="px-4 py-3 border border-slate-300 rounded-xl text-slate-600 hover:bg-slate-100 transition-all">3</a>
+                    <a href="#" class="px-4 py-3 border border-slate-300 rounded-xl text-slate-600 hover:bg-slate-100 transition-all">Próximo ›</a>
+                </nav>
             </div>
         </div>
     </section>
 
+     <footer class="bg-white py-16 border-t border-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex items-center space-x-3 mb-6 opacity-50 hover:opacity-100 transition-all cursor-pointer">
+                        <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
+                    </div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="https://Facebook.com/" aria-label="Facebook" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest uppercase">Facebook</a>
+                    <a href="https://Instagram.com/" aria-label="Instagram" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all uppercase tracking-widest uppercase">Instagram</a>
+                    <a href="https://WhatsApp.com/" aria-label="WhatsApp" class="text-xs font-black text-slate-400 hover:text-green-600 transition-all uppercase tracking-widest uppercase">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
