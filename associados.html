@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça os associados do AvançAraucária - Empresas e instituições que impulsionam o desenvolvimento de Araucária.">
-    <title>Associados - AvançAraucária</title>
+    <meta name="description" content="Conheça o AvançAraucária: missão, visão, valores e pilares que guiam o desenvolvimento econômico e inovador de Araucária.">
+    <title>Galeria de Fotos - AvançAraucária</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
                 <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
                 <li class="dropdown" id="menu1">
     <a href="javascript:;" class="aux-efeito-seta">
-        INSTITUCIONAL <i class="fa fa-chevron-down"></i>
+        INSTITUCIONAL <i class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider"></i>
     </a>
     <ul class="dropdown-menu" id="submenu1">
         <li><a href="institucional.html"><i class="fa fa-caret-right"></i> Sobre a AVANÇA ARAUCÁRIA</a></li>
@@ -43,7 +43,7 @@
         <li><a href="https://avancaraucaria.com.br/agendas"><i class="fa fa-caret-right"></i> Agenda</a></li>
     </ul>
 </li>
-                <a href="associados.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Associados</a>
                 <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
 
@@ -58,80 +58,421 @@
             </div>
         </div>
     </header>
-
-    <!-- Page Header -->
+    
+    <!-- Título da Página -->
     <section class="reveal pt-32 pb-20 bg-blue-900 text-white relative overflow-hidden">
         <div class="absolute right-0 top-0 w-1/3 h-full bg-blue-800 -skew-x-12 translate-x-1/2 z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-2xl">
                 <h2 class="text-5xl md:text-6xl font-black mb-6">Associados</h2>
-                <p class="text-blue-200 text-xl">Empresas e instituições que acreditam no potencial de Araucária e fazem parte da nossa rede de desenvolvimento.</p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="reveal py-24 bg-white">
+    <!-- Filtros -->
+    <section class="py-8 bg-white border-b">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <div>
-                    <h3 class="text-3xl font-black text-slate-900">Nossos Associados</h3>
-                    <p class="text-slate-500 mt-2">15 instituições e empresas ativas</p>
+            <div class="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
+                <!-- Busca -->
+                <form class="flex-1 flex gap-2">
+                    <input type="text" placeholder="Buscar por empresas..." 
+                           class="flex-1 px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                    <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-2xl font-bold text-sm hover:bg-blue-700 transition-all">
+                        Buscar
+                    </button>
+                </form>
+
+                <!-- Filtro -->
+                <select class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-white">
+                    <option value="1">Exibir por: Ramo de Atividade</option>
+                    <option value="2">Exibir por: Ordem Alfabética</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Categorias -->
+    <section class="py-12 bg-slate-50">
+        <div class="container mx-auto px-4 max-w-5xl space-y-4">
+
+            <!-- Categoria -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Agências de Emprego <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">CIEE</span>
+                        <a href="https://avancaraucaria.com.br/associado/ciee" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">
+                            Ver Detalhes
+                        </a>
+                    </div>
                 </div>
-                <a href="contato.html" 
-                   class="mt-6 md:mt-0 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-sm hover:bg-blue-700 transition-all hover-lift">
-                    QUERO ME ASSOCIAR
-                </a>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="associados-grid">
-                <!-- Card 1 -->
-                <div class="associado-card">
-                    <span class="category">Educação</span>
-                    <h4 class="text-2xl font-black text-slate-900 mt-4">UFPR</h4>
-                    <p class="text-slate-600 mt-3">Universidade Federal do Paraná - Campus Araucária</p>
-                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
-                        Rua Quinze de Novembro, Centro
+            <!-- Associações -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Associações <span class="text-slate-400 font-normal text-sm">(5)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4 space-y-1">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">ACIAA - Associação Comercial, Industrial e Agropecuária de Araucária</span>
+                        <a href="https://avancaraucaria.com.br/associado/aciaa-associacao-comercial-industrial-e-agropecuaria-de-araucaria" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">SUCESU PARANÁ</span>
+                        <a href="https://avancaraucaria.com.br/associado/sucesu-parana-associacao-de-usuarios-de-informatica-e-telecomunicacoes" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">Associação de Moradores do Bairro Thomaz Coelho</span>
+                            <a href="https://api.whatsapp.com/send?phone=554199287352&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/associacao-de-moradores-do-bairro-thomaz-coelho" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">AECIAR</span>
+                        <a href="https://avancaraucaria.com.br/associado/aeciar-associacao-das-empresas-da-cidade-industrial-de-araucaria" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">AEATTA</span>
+                        <a href="https://avancaraucaria.com.br/associado/aeatta-associacao-de-engenheiros-arquitetos-tecnicos-e-tecnologos-de-araucaria" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="associado-card">
-                    <span class="category">Tecnologia</span>
-                    <h4 class="text-2xl font-black text-slate-900 mt-4">SUCESU PARANÁ</h4>
-                    <p class="text-slate-600 mt-3">Associação de Usuários de Informática e Telecomunicações do Paraná</p>
-                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
-                        Rua Benjamin Constant, Centro
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="associado-card">
-                    <span class="category">Construção</span>
-                    <h4 class="text-2xl font-black text-slate-900 mt-4">VKR Empreendimentos</h4>
-                    <p class="text-slate-600 mt-3">Soluções imobiliárias e construção civil de alto padrão</p>
-                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
-                        Rua Suzana Suckow, Araucária
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="associado-card">
-                    <span class="category">Imobiliário</span>
-                    <h4 class="text-2xl font-black text-slate-900 mt-4">Maya Incorporadora</h4>
-                    <p class="text-slate-600 mt-3">Desenvolvimento de empreendimentos residenciais e comerciais</p>
-                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-medium text-slate-500">
-                        Travessa Rafael F. Greca
-                    </div>
-                </div>
-
-                <!-- Adicione mais cards aqui conforme necessário -->
             </div>
+
+            <!-- BANCOS COOPERATIVOS -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Bancos Cooperativos <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">CRESOL</span>
+                            <a href="https://api.whatsapp.com/send?phone=5541995020296&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/cresol" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construção de Edifícios -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Construção de Edifícios <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">VKR Empreendimentos</span>
+                            <a href="https://api.whatsapp.com/send?phone=554135521678&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/vkr-empreendimentos" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construtoras -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Construtoras, Incorporadores e Empreiteiras <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Maya Incorporadora</span>
+                        <a href="https://avancaraucaria.com.br/associado/maya-incorporadora" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultorias -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Consultorias <span class="text-slate-400 font-normal text-sm">(7)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4 space-y-1">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Consultora Ambiental</span>
+                        <a href="https://avancaraucaria.com.br/associado/consultora-ambiental" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">Odppis Engenharia e Consultoria Imobiliária</span>
+                            <a href="https://api.whatsapp.com/send?phone=5541999021226&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/odppis-engenharia-e-consultoria-imobiliaria" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">BM Energia</span>
+                        <a href="https://avancaraucaria.com.br/associado/bm-energia" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">SPVS</span>
+                        <a href="https://avancaraucaria.com.br/associado/spvs" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">ASQUIM - Associação dos Químicos do Paraná</span>
+                        <a href="https://avancaraucaria.com.br/associado/asquim-associacao-dos-quimicos-do-parana" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Terra Nova Regularizações Fundiárias</span>
+                        <a href="https://avancaraucaria.com.br/associado/terra-nova-regularizacoes-fundiarias" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">ReNascer</span>
+                            <a href="https://api.whatsapp.com/send?phone=554199863015&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/renascer" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educação -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Educação <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">JA Paraná</span>
+                        <a href="https://avancaraucaria.com.br/associado/ja-parana" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educação superior -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Educação superior - graduação e pós-graduação <span class="text-slate-400 font-normal text-sm">(3)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4 space-y-1">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">Unicesumar</span>
+                            <a href="https://api.whatsapp.com/send?phone=5541996610211&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/unicesumar" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Unifacear</span>
+                        <a href="https://avancaraucaria.com.br/associado/unifacear" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">Uninter</span>
+                            <a href="https://api.whatsapp.com/send?phone=554130311271&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/uninter" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energia Solar -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Energia Solar <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">On Soluções Energéticas</span>
+                            <a href="https://api.whatsapp.com/send?phone=5567999991442&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/on-solucoes-energeticas" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engenharia -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Engenharia <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Geplan</span>
+                        <a href="https://avancaraucaria.com.br/associado/geplan" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ensino médio -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Ensino médio <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Colégio COC</span>
+                        <a href="https://avancaraucaria.com.br/associado/colegio-coc" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entretenimento -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Entretenimento <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <div class="flex items-center gap-3">
+                            <span class="font-medium">Acqua Park</span>
+                            <a href="https://api.whatsapp.com/send?phone=5541998020543&text=Oi" target="_blank" class="text-green-500 text-xl">📱</a>
+                        </div>
+                        <a href="https://avancaraucaria.com.br/associado/acqua-park" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Escolas -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Escolas <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Colégio Estadual Prof. Júlio Szymanski</span>
+                        <a href="https://avancaraucaria.com.br/associado/colegio-estadual-prof.-julio-szymanski" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculdade -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Faculdade <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">UFPR - Universidade Federal do Paraná</span>
+                        <a href="https://avancaraucaria.com.br/associado/ufpr-universidade-federal-do-parana" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indústrias -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Indústrias <span class="text-slate-400 font-normal text-sm">(2)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4 space-y-1">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Parnaplast Embalagens</span>
+                        <a href="https://avancaraucaria.com.br/associado/parnaplast-embalagens" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Impress Decor</span>
+                        <a href="https://avancaraucaria.com.br/associado/impress-decor" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instituições de Ensino -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Instituições de Ensino <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">FIEP</span>
+                        <a href="https://avancaraucaria.com.br/associado/fiep" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Órgãos Públicos -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Órgãos Públicos <span class="text-slate-400 font-normal text-sm">(4)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4 space-y-1">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">TECPAR</span>
+                        <a href="https://avancaraucaria.com.br/associado/tecpar" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Secretaria de Estado da Educação - Núcleo Regional</span>
+                        <a href="https://avancaraucaria.com.br/associado/secretaria-de-estado-da-educacao-nucleo-regional-de-educacao" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Poder Público</span>
+                        <a href="https://avancaraucaria.com.br/associado/poder-publico" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Sebrae</span>
+                        <a href="https://avancaraucaria.com.br/associado/sebrae" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços Advocatícios -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Serviços Advocatícios <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">OAB</span>
+                        <a href="https://avancaraucaria.com.br/associado/oab" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços de Agronomia -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Serviços de Agronomia e Consultoria Agrícola <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Sistema FAEP</span>
+                        <a href="https://avancaraucaria.com.br/associado/sistema-faep" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transporte -->
+            <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
+                <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
+                    <span>Transporte Rodoviário Coletivo <span class="text-slate-400 font-normal text-sm">(1)</span></span>
+                    <span class="text-blue-600 text-xl">+</span>
+                </button>
+                <div class="category-content hidden px-6 pb-4">
+                    <div class="flex items-center justify-between py-3 border-t border-slate-100">
+                        <span class="font-medium">Sharp Transportes</span>
+                        <a href="https://avancaraucaria.com.br/associado/sharp-transportes" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-     <footer class="bg-white py-16 border-t border-slate-100">
+ <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
                 <div class="flex flex-col items-center md:items-start">
@@ -149,6 +490,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+    <script>
+        function toggleCategory(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('span:last-child');
+            
+            content.classList.toggle('hidden');
+            
+            if (content.classList.contains('hidden')) {
+                icon.textContent = '+';
+            } else {
+                icon.textContent = '−';
+            }
+        }
+    </script>
 </body>
 </html>
