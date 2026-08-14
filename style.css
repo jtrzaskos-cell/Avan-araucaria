@@ -299,3 +299,11 @@ footer {
 /* Utilitários */
 .font-black { font-weight: 900; }
 .tracking-tighter { letter-spacing: -0.05em; }
+
+.partner-card {
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+}
