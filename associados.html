@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça o AvançAraucária: missão, visão, valores e pilares que guiam o desenvolvimento econômico e inovador de Araucária.">
-    <title>Associados- AvançAraucária</title>
+    <meta name="description" content="Associados - AvançAraucária">
+    <title>Associados - AvançAraucária</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,50 +22,20 @@
             
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="index.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Início</a>
-                <li class="dropdown" id="menu1">
-    <a href="javascript:;" class="aux-efeito-seta">
-        INSTITUCIONAL <i class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider"></i>
-    </a>
-    <ul class="dropdown-menu" id="submenu1">
-        <li><a href="institucional.html"><i class="fa fa-caret-right"></i> Sobre a AVANÇA ARAUCÁRIA</a></li>
-        <li><a href="governança.html"><i class="fa fa-caret-right"></i> Governança</a></li>
-        <li><a href="galeriapresi.html"><i class="fa fa-caret-right"></i> Galeria de Presidentes</a></li>
-        <li><a href="parceiros.html"><i class="fa fa-caret-right"></i> Parceiros</a></li>
-    </ul>
-</li>
-<li class="dropdown" id="menu1">
- <a href="javascript:;" class="aux-efeito-seta">
-        IMPRENSA <i class="fa fa-chevron-down"></i>
-    </a>
-    <ul class="dropdown-menu" id="submenu1">
-        <li><a href="noticias.html"><i class="fa fa-caret-right"></i> Notícias</a></li>
-        <li><a href="galeria.html"><i class="fa fa-caret-right"></i> Galeria</a></li>
-        <li><a href="https://avancaraucaria.com.br/agendas"><i class="fa fa-caret-right"></i> Agenda</a></li>
-    </ul>
-</li>
-                <a href="associados.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="institucional.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Institucional</a>
+                <a href="associados.html" class="nav-link font-semibold text-blue-600 text-sm uppercase tracking-wider">Associados</a>
+                <a href="galerias.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Galerias</a>
+                <a href="noticias.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Notícias</a>
                 <a href="contato.html" class="nav-link font-semibold text-slate-700 hover:text-blue-600 text-sm uppercase tracking-wider">Contato</a>
             </nav>
-
-            <div class="flex items-center gap-3">
-                <button onclick="alert('Busca em desenvolvimento')" 
-                        class="px-6 py-3 bg-slate-100 hover:bg-blue-600 hover:text-white rounded-2xl text-sm font-bold uppercase transition-all">
-                    Buscar
-                </button>
-                <button id="menu-mobile" class="lg:hidden p-3 bg-slate-100 rounded-2xl text-sm font-bold uppercase">
-                    Menu
-                </button>
-            </div>
         </div>
     </header>
-    
-    <!-- Título da Página -->
-    <section class="reveal pt-32 pb-20 bg-blue-900 text-white relative overflow-hidden">
+
+    <!-- Título -->
+    <section class="pt-32 pb-16 bg-blue-900 text-white relative overflow-hidden">
         <div class="absolute right-0 top-0 w-1/3 h-full bg-blue-800 -skew-x-12 translate-x-1/2 z-0"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl">
-                <h2 class="text-5xl md:text-6xl font-black mb-6">Associados</h2>
-            </div>
+            <h2 class="text-5xl md:text-6xl font-black">Associados</h2>
         </div>
     </section>
 
@@ -80,7 +50,6 @@
                         Buscar
                     </button>
                 </div>
-
                 <select id="viewMode" onchange="changeView()" 
                         class="px-5 py-3 rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-white">
                     <option value="ramo">Exibir por: Ramo de Atividade</option>
@@ -99,359 +68,344 @@
 
                 <!-- Agências de Emprego -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Agências de Emprego <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Agências de Emprego (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">CIEE</span>
-                            <a href="https://cieepr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://cieepr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Associações -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Associações <span class="text-slate-400 font-normal text-sm">(5)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Associações (5)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">ACIAA - Associação Comercial, Industrial e Agropecuária de Araucária</span>
-                            <a href="https://www.aciaa.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.aciaa.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">SUCESU PARANÁ</span>
-                            <a href="https://www.prsucesu.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.prsucesu.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">Associação de Moradores do Bairro Thomaz Coelho</span>
-                            </div>
+                            <span class="font-medium">Associação de Moradores do Bairro Thomaz Coelho</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">AECIAR</span>
-                            <a href="https://aeciar.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://aeciar.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">AEATTA</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bancos Cooperativos -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Bancos Cooperativos <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Bancos Cooperativos (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">CRESOL</span>
-                                <a href="https://cresol.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">CRESOL</span>
+                            <a href="https://cresol.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Construção de Edifícios -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Construção de Edifícios <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Construção de Edifícios (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">VKR Empreendimentos</span>
-                                <a href="https://www.vkrempreendimentos.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">VKR Empreendimentos</span>
+                            <a href="https://www.vkrempreendimentos.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Construtoras -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Construtoras, Incorporadores e Empreiteiras <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Construtoras, Incorporadores e Empreiteiras (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Maya Incorporadora</span>
-                            <a href="https://www.mayaincorporadora.com/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.mayaincorporadora.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Consultorias -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Consultorias <span class="text-slate-400 font-normal text-sm">(7)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Consultorias (7)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Consultora Ambiental</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">Odppis Engenharia e Consultoria Imobiliária</span>
-                                <a href="https://odpimoveis.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">Odppis Engenharia e Consultoria Imobiliária</span>
+                            <a href="https://odpimoveis.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">BM Energia</span>
-                            <a href="https://www.bm.eng.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.bm.eng.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">SPVS</span>
-                            <a href="https://spvs.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://spvs.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">ASQUIM</span>
-                            <a href="https://asquim.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://asquim.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Terra Nova Regularizações Fundiárias</span>
-                            <a href="https://grupoterranova.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://grupoterranova.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">ReNascer</span>
-                                <a href="https://www.renascerdesenvolvimento.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">ReNascer</span>
+                            <a href="https://www.renascerdesenvolvimento.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Educação -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Educação <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Educação (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">JA Paraná</span>
-                            <a href="https://japr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://japr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Educação superior -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Educação superior <span class="text-slate-400 font-normal text-sm">(3)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Educação superior (3)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">Unicesumar</span>
-                                <a href="https://api.whatsapp.com/send?phone=5541996610211&text=Oi" target="_blank" class="text-green-500">📱</a>
-                            </div>
-                            <a href="https://np2.unicesumar.edu.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <span class="font-medium">Unicesumar</span>
+                            <a href="https://www.unicesumar.edu.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Unifacear</span>
-                            <a href="https://www.unifacear.edu.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.unifacear.edu.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">Uninter</span>
-                                <a href="https://www.uninter.com/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">Uninter</span>
+                            <a href="https://www.uninter.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Energia Solar -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Energia Solar <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Energia Solar (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">On Soluções Energéticas</span>
-                                <a href="https://onsolucoesenergeticas.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">On Soluções Energéticas</span>
+                            <a href="https://onsolucoesenergeticas.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Engenharia -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Engenharia <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Engenharia (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Geplan</span>
-                            <a href="https://geplangerenciamento.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://geplangerenciamento.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Ensino médio -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Ensino médio <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Ensino médio (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Colégio COC</span>
-                            <a href="https://coc.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://coc.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Entretenimento -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Entretenimento <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Entretenimento (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
-                            <div class="flex items-center gap-3">
-                                <span class="font-medium">Acqua Park</span>
-                                <a href="https://araucariapark.com.br/" target="_blank" class="text-green-500">📱</a>
-                            </div>
+                            <span class="font-medium">Acqua Park</span>
+                            <a href="https://araucariapark.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Escolas -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Escolas <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Escolas (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Colégio Estadual Prof. Júlio Szymanski</span>
-                            <a href="https://www.consultaescolas.pr.gov.br/consultaescolas/pages/templates/initial2.xhtml;jsessionid=89o3JKzDzVfljty3UDuMwSA1dlBiyEjn8aCYPcuo.sseed75181?windowId=5d1&codigoMunicipio=180&codigoEstab=16" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.consultaescolas.pr.gov.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Faculdade -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Faculdade <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Faculdade (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">UFPR - Universidade Federal do Paraná</span>
-                            <a href="https://ufpr.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://ufpr.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Indústrias -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Indústrias <span class="text-slate-400 font-normal text-sm">(2)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Indústrias (2)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Parnaplast Embalagens</span>
-                            <a href="https://parnaplast.com.br/pt-br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://parnaplast.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Impress Decor</span>
-                            <a href="https://www.impress.biz/pt/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.impress.biz/pt/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Instituições de Ensino -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Instituições de Ensino <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Instituições de Ensino (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">FIEP</span>
-                            <a href="https://novo.sistemafiep.org.br/pt/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://novo.sistemafiep.org.br/pt/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Órgãos Públicos -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Órgãos Públicos <span class="text-slate-400 font-normal text-sm">(4)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Órgãos Públicos (4)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">TECPAR</span>
-                            <a href="https://www.tecpar.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.tecpar.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Secretaria de Estado da Educação</span>
-                            <a href="https://www.educacao.pr.gov.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.educacao.pr.gov.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Poder Público</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sebrae</span>
-                            <a href="https://sebrae.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://sebrae.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Serviços Advocatícios -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Serviços Advocatícios <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Serviços Advocatícios (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">OAB</span>
-                            <a href="https://www.oabpr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.oabpr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Serviços de Agronomia -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Serviços de Agronomia <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Serviços de Agronomia (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sistema FAEP</span>
-                            <a href="https://www.sistemafaep.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.sistemafaep.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Transporte -->
                 <div class="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm">
-                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition-all">
-                        <span>Transporte Rodoviário Coletivo <span class="text-slate-400 font-normal text-sm">(1)</span></span>
-                        <span class="text-blue-600 text-xl">+</span>
+                    <button onclick="toggleCategory(this)" class="w-full flex items-center justify-between px-6 py-4 bg-blue-600 text-white font-bold text-left">
+                        <span>Transporte Rodoviário Coletivo (1)</span>
+                        <span class="text-xl">+</span>
                     </button>
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sharp Transportes</span>
-                            <a href="https://www.sharptransportes.com/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.sharptransportes.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -470,25 +424,27 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">ACIAA</span>
-                            <a href="https://www.aciaa.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.aciaa.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">AEATTA</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">AECIAR</span>
-                            <a href="https://aeciar.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://aeciar.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Acqua Park</span>
-                            <a href="https://araucariapark.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://araucariapark.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">ASQUIM</span>
-                            <a href="https://asquim.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://asquim.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Associação de Moradores do Bairro Thomaz Coelho</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -502,7 +458,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">BM Energia</span>
-                            <a href="https://www.bm.eng.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.bm.eng.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -516,22 +472,23 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">CIEE</span>
-                            <a href="https://cieepr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://cieepr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Colégio COC</span>
-                            <a href="https://coc.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://coc.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Colégio Estadual Prof. Júlio Szymanski</span>
-                            <a href="https://www.consultaescolas.pr.gov.br/consultaescolas/pages/templates/initial2.xhtml?codigoMunicipio=180&codigoEstab=16" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.consultaescolas.pr.gov.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Consultora Ambiental</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">CRESOL</span>
-                            <a href="https://cresol.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://cresol.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -545,7 +502,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">FIEP</span>
-                            <a href="https://novo.sistemafiep.org.br/pt/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://novo.sistemafiep.org.br/pt/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -559,7 +516,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Geplan</span>
-                            <a href="https://geplangerenciamento.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://geplangerenciamento.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -573,7 +530,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Impress Decor</span>
-                            <a href="https://www.impress.biz/pt/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.impress.biz/pt/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -587,7 +544,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">JA Paraná</span>
-                            <a href="https://japr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://japr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -601,7 +558,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Maya Incorporadora</span>
-                            <a href="https://www.mayaincorporadora.com/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.mayaincorporadora.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -615,15 +572,15 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">OAB</span>
-                            <a href="https://www.oabpr.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.oabpr.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Odppis Engenharia</span>
-                            <a href="https://odpimoveis.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://odpimoveis.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">On Soluções Energéticas</span>
-                            <a href="https://onsolucoesenergeticas.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://onsolucoesenergeticas.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -637,10 +594,11 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Parnaplast Embalagens</span>
-                            <a href="https://parnaplast.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://parnaplast.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Poder Público</span>
+                            <a href="#" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -654,7 +612,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">ReNascer</span>
-                            <a href="https://www.renascerdesenvolvimento.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.renascerdesenvolvimento.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -668,27 +626,27 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sebrae</span>
-                            <a href="https://sebrae.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://sebrae.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Secretaria de Estado da Educação</span>
-                            <a href="https://www.educacao.pr.gov.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.educacao.pr.gov.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sharp Transportes</span>
-                            <a href="https://www.sharptransportes.com/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.sharptransportes.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Sistema FAEP</span>
-                            <a href="https://www.sistemafaep.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.sistemafaep.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">SPVS</span>
-                            <a href="https://spvs.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://spvs.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">SUCESU PARANÁ</span>
-                            <a href="https://www.prsucesu.org.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.prsucesu.org.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -702,11 +660,11 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">TECPAR</span>
-                            <a href="https://www.tecpar.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.tecpar.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Terra Nova</span>
-                            <a href="https://grupoterranova.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://grupoterranova.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -720,19 +678,19 @@
                     <div class="category-content hidden px-6 pb-4 space-y-1">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">UFPR</span>
-                            <a href="https://ufpr.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://ufpr.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Unicesumar</span>
-                            <a href="https://www.unicesumar.edu.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.unicesumar.edu.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Unifacear</span>
-                            <a href="https://www.unifacear.edu.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.unifacear.edu.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">Uninter</span>
-                            <a href="https://www.uninter.com/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.uninter.com/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -746,7 +704,7 @@
                     <div class="category-content hidden px-6 pb-4">
                         <div class="flex items-center justify-between py-3 border-t border-slate-100">
                             <span class="font-medium">VKR Empreendimentos</span>
-                            <a href="https://www.vkrempreendimentos.com.br/" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
+                            <a href="https://www.vkrempreendimentos.com.br/" target="_blank" class="px-4 py-2 bg-blue-50 text-blue-600 rounded-xl text-sm font-bold hover:bg-blue-600 hover:text-white transition-all">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
@@ -756,19 +714,17 @@
     </section>
 
     <!-- Footer -->
-     <footer class="bg-white py-16 border-t border-slate-100">
+    <footer class="bg-white py-16 border-t border-slate-100">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
                 <div class="flex flex-col items-center md:items-start">
-                    <div class="flex items-center space-x-3 mb-6 opacity-50 hover:opacity-100 transition-all cursor-pointer">
-                        <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
-                    </div>
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest uppercase">© 2026 AvançAraucária. Todos os direitos reservados.</p>
+                    <span class="font-black text-slate-900 text-lg tracking-tighter uppercase">AVANÇARAUCÁRIA</span>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">© 2026 AvançAraucária. Todos os direitos reservados.</p>
                 </div>
                 <div class="flex space-x-8">
-                    <a href="https://Facebook.com/" aria-label="Facebook" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all uppercase tracking-widest uppercase">Facebook</a>
-                    <a href="https://Instagram.com/" aria-label="Instagram" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all uppercase tracking-widest uppercase">Instagram</a>
-                    <a href="https://WhatsApp.com/" aria-label="WhatsApp" class="text-xs font-black text-slate-400 hover:text-green-600 transition-all uppercase tracking-widest uppercase">WhatsApp</a>
+                    <a href="#" class="text-xs font-black text-slate-400 hover:text-blue-600 transition-all">Facebook</a>
+                    <a href="#" class="text-xs font-black text-slate-400 hover:text-pink-600 transition-all">Instagram</a>
+                    <a href="#" class="text-xs font-black text-slate-400 hover:text-green-600 transition-all">WhatsApp</a>
                 </div>
             </div>
         </div>
