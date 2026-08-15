@@ -781,6 +781,37 @@
                 viewRamo.classList.remove('hidden');
             }
         }
+
+        function setupDropdowns() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        if (!link || !menu) return;
+
+        // Mouse entra
+        dropdown.addEventListener('mouseenter', () => {
+            menu.style.display = 'block';
+            menu.style.opacity = '1';
+            menu.style.transform = 'translateY(0)';
+        });
+
+        // Mouse sai
+        dropdown.addEventListener('mouseleave', () => {
+            menu.style.opacity = '0';
+            menu.style.transform = 'translateY(10px)';
+            
+            // Aguarda a animação terminar antes de esconder
+            setTimeout(() => {
+                if (!dropdown.matches(':hover')) {
+                    menu.style.display = 'none';
+                }
+            }, 250);
+        });
+    });
+}
     </script>
 </body>
 </html>
