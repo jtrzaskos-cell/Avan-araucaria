@@ -760,58 +760,7 @@
         </div>
     </footer>
 
-    <script>
-        function toggleCategory(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('span:last-child');
-            content.classList.toggle('hidden');
-            icon.textContent = content.classList.contains('hidden') ? '+' : '−';
-        }
-
-        function changeView() {
-            const mode = document.getElementById('viewMode').value;
-            const viewRamo = document.getElementById('viewRamo');
-            const viewAlfa = document.getElementById('viewAlfa');
-
-            if (mode === 'alfa') {
-                viewRamo.classList.add('hidden');
-                viewAlfa.classList.remove('hidden');
-            } else {
-                viewAlfa.classList.add('hidden');
-                viewRamo.classList.remove('hidden');
-            }
-        }
-
-        function setupDropdowns() {
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        const menu = dropdown.querySelector('.dropdown-menu');
-
-        if (!link || !menu) return;
-
-        // Mouse entra
-        dropdown.addEventListener('mouseenter', () => {
-            menu.style.display = 'block';
-            menu.style.opacity = '1';
-            menu.style.transform = 'translateY(0)';
-        });
-
-        // Mouse sai
-        dropdown.addEventListener('mouseleave', () => {
-            menu.style.opacity = '0';
-            menu.style.transform = 'translateY(10px)';
-            
-            // Aguarda a animação terminar antes de esconder
-            setTimeout(() => {
-                if (!dropdown.matches(':hover')) {
-                    menu.style.display = 'none';
-                }
-            }, 250);
-        });
-    });
-}
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 </html>

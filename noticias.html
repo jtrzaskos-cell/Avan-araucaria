@@ -597,44 +597,7 @@
         </div>
     </footer>
 
-    <script>
-        let currentPage = 1;
-        const totalPages = 4;
-
-        function changePage(page) {
-            if (page < 1 || page > totalPages) return;
-            
-            // Esconde todas as páginas
-            document.querySelectorAll('.news-page').forEach(el => el.classList.add('hidden'));
-            
-            // Mostra a página selecionada
-            document.getElementById('page-' + page).classList.remove('hidden');
-            
-            currentPage = page;
-            updatePagination();
-            
-            // Sobe para o topo das notícias
-            window.scrollTo({ top: 400, behavior: 'smooth' });
-        }
-
-        function updatePagination() {
-            // Atualiza estilo dos botões de página
-            document.querySelectorAll('.page-btn').forEach((btn, index) => {
-                const pageNum = index + 1;
-                if (pageNum === currentPage) {
-                    btn.className = 'page-btn w-10 h-10 flex items-center justify-center rounded-xl bg-blue-600 text-white font-bold transition-all';
-                } else {
-                    btn.className = 'page-btn w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-all';
-                }
-            });
-
-            // Atualiza botões anterior/próximo
-            document.getElementById('btn-prev').disabled = currentPage === 1;
-            document.getElementById('btn-next').disabled = currentPage === totalPages;
-        }
-
-        // Inicializa
-        updatePagination();
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
