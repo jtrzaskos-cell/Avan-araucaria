@@ -65,78 +65,88 @@ header {
 }
 
 /* -------------------- DROPDOWNS -------------------- */
+/* ----- NAV / DROPDOWN ----- */
+nav.hidden.lg\:flex,
+nav {
+    align-items: center;
+}
+
 .dropdown {
     position: relative;
-    list-style: none;
+    list-style: none !important;
+    display: inline-flex;
+    align-items: center;
 }
 
 .dropdown > a,
 .aux-efeito-seta {
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     color: #334155;
     cursor: pointer;
-    display: flex;
+    padding: 0.5rem 0;
+    display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    transition: color 0.25s ease;
+    gap: 0.3rem;
+    white-space: nowrap;
 }
 
 .dropdown > a:hover,
 .aux-efeito-seta:hover {
-    color: var(--primary);
+    color: #025BAA;
 }
 
+/* Menu suspenso – posicionamento e aparência corretos */
 .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) translateY(6px);
-    min-width: 260px;
-    background: #fff;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-top: 0.5rem;
+    min-width: 240px;
+    background: #ffffff !important;
     border-radius: 1rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-    border: 1px solid var(--border);
-    padding: 0.5rem 0;
-    z-index: 200;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+    border: 1px solid #e2e8f0;
+    padding: 0.4rem 0;
+    z-index: 9999 !important;
+    list-style: none !important;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.dropdown:hover .dropdown-menu {
+/* Mostra no hover (CSS) – o JS reforça isso */
+.dropdown:hover > .dropdown-menu {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-menu li {
-    list-style: none;
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
 }
 
 .dropdown-menu li a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.35rem;
-    font-size: 0.8rem;
+    display: block;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #334155;
-    text-transform: none;
-    letter-spacing: 0;
-    transition: background 0.15s ease, color 0.15s ease;
+    color: #334155 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap;
+    background: transparent;
 }
 
 .dropdown-menu li a:hover {
-    background: #f1f5f9;
-    color: var(--primary);
-}
-
-.dropdown-menu i {
-    font-size: 0.7rem;
-    color: var(--primary);
+    background: #f1f5f9 !important;
+    color: #025BAA !important;
 }
 
 /* -------------------- HERO / PAGE HEADER -------------------- */
@@ -178,22 +188,67 @@ header {
 }
 
 /* -------------------- CARDS GENÉRICOS -------------------- */
-.associado-card,
-.box-noticia,
-.gallery-card {
-    background: #fff;
-    border-radius: 1.5rem;
-    border: 1px solid var(--border);
-    overflow: hidden;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow);
+.associado-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 1.25rem !important;
+    padding: 1.5rem 1.35rem !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.associado-card:hover,
-.box-noticia:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-6px);
-    border-color: #bfdbfe;
+.associado-card:hover {
+    border-color: #93c5fd !important;
+    box-shadow: 0 12px 32px rgba(2, 91, 170, 0.12);
+    transform: translateY(-4px);
+}
+
+.associado-card h5 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.associado-card:hover h5,
+.associado-card.group:hover h5 {
+    color: #025BAA;
+}
+
+.associado-card p {
+    margin: 0;
+}
+
+.associado-card p.text-slate-500 {
+    color: #64748b !important;
+    font-size: 0.875rem;
+    margin-top: 0.35rem;
+}
+
+.associado-card p.text-xs,
+.associado-card p.text-slate-400 {
+    color: #94a3b8 !important;
+    font-size: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+/* Garante que o link envolva o card inteiro */
+a:has(.associado-card),
+.associado-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+}
+
+/* Grid dos associados na home */
+section .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    align-items: stretch;
 }
 
 /* -------------------- GALERIA -------------------- */
